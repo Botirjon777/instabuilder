@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "AMD Z790 Ultra Tower Workstation",
-    "image": "/assets/pc-pics/amd.png",
+    "image": "/assets/pc-pics/AMD.png",
     "price": 3300,
     "realPrice": 3794,
     "type": {
@@ -13,7 +13,7 @@
       "storage": "Up to 12 drives",
       "graphics": "Supports 2 GPUs"
     },
-    "resolutions": ["HDR", "4K", "1080p", "1440p"],
+    "resolutions": ["4K"],
     "caseSize": "Large",
     "caseType": "Default",
     "chipBrand": "AMD"
@@ -32,7 +32,7 @@
       "storage": "Up to 4 SSDs or HDDs",
       "graphics": "Supports 2 GPUs"
     },
-    "resolutions": ["4K", "HDR", "1440p"],
+    "resolutions": ["4K"],
     "caseSize": "Medium",
     "caseType": "Default",
     "chipBrand": "Intel"
@@ -57,6 +57,82 @@
     }
   },
   {
+    "id": "1a2b3c4d-intel-tower",
+    "title": "Intel Tower Workstation",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 3200,
+    "realPrice": 3790,
+    "resolutions": ["1080p", "1440p"],
+    "caseSize": "Tower Desktop",
+    "caseType": "Windowed",
+    "chipBrand": "Intel",
+    "type": {
+      "socket": 1700,
+      "cpu": "Core i7",
+      "chipset": "Z690",
+      "memory": "Up to 64GB DDR5",
+      "storage": "1TB NVMe + 2TB HDD",
+      "graphics": "RTX 4070"
+    }
+  },
+  {
+    "id": "2b3c4d5e-amd-mini",
+    "title": "Compact AMD Creator Box",
+    "image": "/assets/pc-pics/amd.png",
+    "price": 2850,
+    "realPrice": 3100,
+    "resolutions": ["1440p"],
+    "caseSize": "Mini Desktop",
+    "caseType": "Standard",
+    "chipBrand": "AMD",
+    "type": {
+      "socket": "AM5",
+      "cpu": "Ryzen 7 7700X",
+      "chipset": "X670",
+      "memory": "Up to 128GB",
+      "storage": "2x M.2 SSD",
+      "graphics": "RX 6800"
+    }
+  },
+  {
+    "id": "3c4d5e6f-nvidia-laptop",
+    "title": "NVIDIA Mobile Workstation",
+    "image": "/assets/pc-pics/nvidia.png",
+    "price": 2950,
+    "realPrice": 3450,
+    "resolutions": ["1080p", "4K"],
+    "caseSize": "Workstation Laptop",
+    "caseType": "Slim",
+    "chipBrand": "NVIDIA",
+    "type": {
+      "socket": "BGA",
+      "cpu": "Core i7 Mobile",
+      "chipset": "Mobile",
+      "memory": "32GB LPDDR5",
+      "storage": "1TB SSD",
+      "graphics": "RTX A2000"
+    }
+  },
+  {
+    "id": "4d5e6f7g-radeon-tower",
+    "title": "RADEON Tower Pro Builder",
+    "image": "/assets/pc-pics/radeon.png",
+    "price": 3300,
+    "realPrice": 3950,
+    "resolutions": ["1440p", "4K"],
+    "caseSize": "Tower Desktop",
+    "caseType": "Mesh",
+    "chipBrand": "RADEON",
+    "type": {
+      "socket": "AM4",
+      "cpu": "Ryzen 5 5600X",
+      "chipset": "B550",
+      "memory": "64GB",
+      "storage": "512GB SSD + 2TB HDD",
+      "graphics": "Radeon RX 6750 XT"
+    }
+  },
+  {
     "id": "a24abd8d-d192-4e9d-b7a5-05608fa75b74",
     "title": "Mini PC for Everyday Use #2",
     "image": "/assets/pc-pics/intel.png",
@@ -65,7 +141,7 @@
     "resolutions": ["1080"],
     "caseSize": "Small",
     "caseType": "Windowed",
-    "chipBrand": "NVIDIA",
+    "chipBrand": "Nvidia",
     "type": {
       "socket": 1200,
       "cpu": "Core i5",
@@ -77,14 +153,14 @@
   },
   {
     "id": "696f32f7-3110-476c-8171-37149bb3c98f",
-    "title": "Radeon RX 7900 Workhorse #3",
+    "title": "RADEON RX 7900 Workhorse #3",
     "image": "/assets/pc-pics/intel.png",
     "price": 3931,
     "realPrice": 4987,
     "resolutions": ["1080"],
     "caseSize": "Large",
     "caseType": "Windowed",
-    "chipBrand": "NVIDIA",
+    "chipBrand": "Nvidia",
     "type": {
       "socket": 1151,
       "cpu": "Core i5",
@@ -96,14 +172,14 @@
   },
   {
     "id": "d0aa13be-cfe5-4569-88c7-e901d51ead5c",
-    "title": "Radeon RX 7900 Workhorse #4",
+    "title": "RADEON RX 7900 Workhorse #4",
     "image": "/assets/pc-pics/intel.png",
     "price": 842,
     "realPrice": 1012,
     "resolutions": ["1080", "1440"],
     "caseSize": "Small",
     "caseType": "Windowed",
-    "chipBrand": "Radeon",
+    "chipBrand": "RADEON",
     "type": {
       "socket": "AM4",
       "cpu": "Ryzen 9",
@@ -122,7 +198,26 @@
     "resolutions": ["1080", "1440"],
     "caseSize": "Large",
     "caseType": "Windowed",
-    "chipBrand": "NVIDIA",
+    "chipBrand": "Nvidia",
+    "type": {
+      "socket": "AM5",
+      "cpu": "Core i9",
+      "chipset": "Intel Z690",
+      "memory": "Up to 256GB",
+      "storage": "Up to 9 hard drives or SSD drives",
+      "graphics": "Integrated + Dedicated"
+    }
+  },
+  {
+    "id": "f47c1d59-081a-4b3c-8ea5-06139db78cb2",
+    "title": "Intel Z790 Tower Gaming PC #5",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 1482,
+    "realPrice": 1910,
+    "resolutions": ["1080", "1440"],
+    "caseSize": "Mini Desktop",
+    "caseType": "Windowed",
+    "chipBrand": "Nvidia",
     "type": {
       "socket": "AM5",
       "cpu": "Core i9",
@@ -134,7 +229,7 @@
   },
   {
     "id": "da03443b-2f56-4f11-a089-456eced1a1ad",
-    "title": "Radeon Gaming Ultra Tower #6",
+    "title": "RADEON Gaming Ultra Tower #6",
     "image": "/assets/pc-pics/intel.png",
     "price": 1592,
     "realPrice": 2062,
@@ -160,7 +255,7 @@
     "resolutions": ["1080", "1440", "4K"],
     "caseSize": "Large",
     "caseType": "Windowed",
-    "chipBrand": "Radeon",
+    "chipBrand": "RADEON",
     "type": {
       "socket": "AM4",
       "cpu": "Ryzen 5",
@@ -173,7 +268,7 @@
   {
     "id": "c406868b-1efb-4819-b899-cca2b40a00df",
     "title": "AMD Ryzen 9 Creator Station #8",
-    "image": "/assets/pc-pics/amd.png",
+    "image": "/assets/pc-pics/AMD.png",
     "price": 2300,
     "realPrice": 2679,
     "resolutions": ["1080"],
@@ -191,14 +286,14 @@
   },
   {
     "id": "ee420428-919c-4cd6-996d-f54cbeb0374e",
-    "title": "Radeon RX 7900 Workhorse #9",
+    "title": "RADEON RX 7900 Workhorse #9",
     "image": "/assets/pc-pics/intel.png",
     "price": 3686,
     "realPrice": 4644,
     "resolutions": ["4K"],
     "caseSize": "Medium",
     "caseType": "Default",
-    "chipBrand": "NVIDIA",
+    "chipBrand": "Nvidia",
     "type": {
       "socket": 1151,
       "cpu": "Ryzen 9",
@@ -217,7 +312,7 @@
     "resolutions": ["1080", "1440"],
     "caseSize": "Small",
     "caseType": "Windowed",
-    "chipBrand": "Radeon",
+    "chipBrand": "RADEON",
     "type": {
       "socket": 1151,
       "cpu": "Ryzen 7",
@@ -236,7 +331,7 @@
     "resolutions": ["1080", "1440"],
     "caseSize": "Small",
     "caseType": "Windowed",
-    "chipBrand": "NVIDIA",
+    "chipBrand": "Nvidia",
     "type": {
       "socket": "AM5",
       "cpu": "Core i9",
@@ -248,8 +343,8 @@
   },
   {
     "id": "5b73237e-f7a9-4a7c-bb84-0dfd00c51ff2",
-    "title": "Radeon RX 7900 Workhorse #12",
-    "image": "/assets/pc-pics/amd.png",
+    "title": "RADEON RX 7900 Workhorse #12",
+    "image": "/assets/pc-pics/AMD.png",
     "price": 2615,
     "realPrice": 3324,
     "resolutions": ["4K"],
@@ -274,7 +369,7 @@
     "resolutions": ["1080", "1440", "4K"],
     "caseSize": "Medium",
     "caseType": "Default",
-    "chipBrand": "Radeon",
+    "chipBrand": "RADEON",
     "type": {
       "socket": 1151,
       "cpu": "Core i5",
@@ -331,7 +426,7 @@
     "resolutions": ["4K"],
     "caseSize": "Small",
     "caseType": "Windowed",
-    "chipBrand": "Radeon",
+    "chipBrand": "RADEON",
     "type": {
       "socket": 1700,
       "cpu": "Core i9",
@@ -343,8 +438,8 @@
   },
   {
     "id": "6f3aa48d-b117-42c2-adcc-a9f78989ae34",
-    "title": "Radeon Gaming Ultra Tower #17",
-    "image": "/assets/pc-pics/amd.png",
+    "title": "RADEON Gaming Ultra Tower #17",
+    "image": "/assets/pc-pics/AMD.png",
     "price": 818,
     "realPrice": 998,
     "resolutions": ["1080", "1440", "4K"],
@@ -362,14 +457,14 @@
   },
   {
     "id": "4f5ec222-965c-4dd3-a8fe-0f4a88859849",
-    "title": "Radeon RX 7900 Workhorse #18",
+    "title": "RADEON RX 7900 Workhorse #18",
     "image": "/assets/pc-pics/intel.png",
     "price": 889,
     "realPrice": 1031,
     "resolutions": ["1080", "1440"],
     "caseSize": "Large",
     "caseType": "Windowed",
-    "chipBrand": "Radeon",
+    "chipBrand": "RADEON",
     "type": {
       "socket": 1200,
       "cpu": "Core i5",
@@ -388,7 +483,7 @@
     "resolutions": ["1440"],
     "caseSize": "Large",
     "caseType": "Default",
-    "chipBrand": "Radeon",
+    "chipBrand": "RADEON",
     "type": {
       "socket": "AM5",
       "cpu": "Ryzen 7",
@@ -407,7 +502,7 @@
     "resolutions": ["4K"],
     "caseSize": "Medium",
     "caseType": "Default",
-    "chipBrand": "Radeon",
+    "chipBrand": "RADEON",
     "type": {
       "socket": 1151,
       "cpu": "Ryzen 9",
@@ -426,7 +521,7 @@
     "resolutions": ["4K"],
     "caseSize": "Large",
     "caseType": "Windowed",
-    "chipBrand": "Radeon",
+    "chipBrand": "RADEON",
     "type": {
       "socket": 1200,
       "cpu": "Core i9",
@@ -458,7 +553,7 @@
   {
     "id": "15b46b5b-5fee-44ac-a2e3-7b96d054a8f6",
     "title": "NVIDIA Studio Creator Box #23",
-    "image": "/assets/pc-pics/amd.png",
+    "image": "/assets/pc-pics/AMD.png",
     "price": 790,
     "realPrice": 901,
     "resolutions": ["1080", "1440", "4K"],
@@ -483,7 +578,7 @@
     "resolutions": ["4K"],
     "caseSize": "Medium",
     "caseType": "Default",
-    "chipBrand": "NVIDIA",
+    "chipBrand": "Nvidia",
     "type": {
       "socket": "AM5",
       "cpu": "Ryzen 7",
@@ -495,7 +590,7 @@
   },
   {
     "id": "82ad604a-df12-44ff-bf27-607f3db8e375",
-    "title": "Radeon RX 7900 Workhorse #25",
+    "title": "RADEON RX 7900 Workhorse #25",
     "image": "/assets/pc-pics/intel.png",
     "price": 831,
     "realPrice": 997,
@@ -521,7 +616,7 @@
     "resolutions": ["4K"],
     "caseSize": "Medium",
     "caseType": "Default",
-    "chipBrand": "NVIDIA",
+    "chipBrand": "Nvidia",
     "type": {
       "socket": 1200,
       "cpu": "Core i7",
@@ -533,14 +628,14 @@
   },
   {
     "id": "0cd51848-8db4-4b70-8486-4602c3416559",
-    "title": "Radeon Gaming Ultra Tower #27",
+    "title": "RADEON Gaming Ultra Tower #27",
     "image": "/assets/pc-pics/intel.png",
     "price": 3494,
     "realPrice": 3961,
     "resolutions": ["1080"],
     "caseSize": "Medium",
     "caseType": "Windowed",
-    "chipBrand": "Radeon",
+    "chipBrand": "RADEON",
     "type": {
       "socket": "AM5",
       "cpu": "Core i5",
@@ -553,7 +648,7 @@
   {
     "id": "df3335d9-ddca-4d66-bc81-cd092c8ed524",
     "title": "NVIDIA RTX 4080 Beast Rig #28",
-    "image": "/assets/pc-pics/amd.png",
+    "image": "/assets/pc-pics/AMD.png",
     "price": 960,
     "realPrice": 1185,
     "resolutions": ["1080", "1440", "4K"],
@@ -597,7 +692,7 @@
     "resolutions": ["1080"],
     "caseSize": "Small",
     "caseType": "Default",
-    "chipBrand": "Radeon",
+    "chipBrand": "RADEON",
     "type": {
       "socket": "AM4",
       "cpu": "Ryzen 5",
@@ -609,14 +704,14 @@
   },
   {
     "id": "b295aed5-4e81-455c-b21d-cfdb230db776",
-    "title": "Radeon Gaming Ultra Tower #31",
+    "title": "RADEON Gaming Ultra Tower #31",
     "image": "/assets/pc-pics/intel.png",
     "price": 1638,
     "realPrice": 2090,
     "resolutions": ["4K"],
     "caseSize": "Large",
     "caseType": "Windowed",
-    "chipBrand": "Radeon",
+    "chipBrand": "RADEON",
     "type": {
       "socket": 1200,
       "cpu": "Ryzen 5",
@@ -635,7 +730,7 @@
     "resolutions": ["1440"],
     "caseSize": "Large",
     "caseType": "Windowed",
-    "chipBrand": "Radeon",
+    "chipBrand": "RADEON",
     "type": {
       "socket": 1200,
       "cpu": "Ryzen 9",
@@ -648,7 +743,7 @@
   {
     "id": "67f7329f-d6f3-4745-a1b4-4c4f29a0cb49",
     "title": "Intel Z790 Tower Gaming PC #33",
-    "image": "/assets/pc-pics/amd.png",
+    "image": "/assets/pc-pics/AMD.png",
     "price": 3448,
     "realPrice": 3806,
     "resolutions": ["1080", "1440", "4K"],
@@ -673,7 +768,7 @@
     "resolutions": ["1080", "1440"],
     "caseSize": "Small",
     "caseType": "Windowed",
-    "chipBrand": "Radeon",
+    "chipBrand": "RADEON",
     "type": {
       "socket": 1151,
       "cpu": "Ryzen 9",
@@ -692,7 +787,7 @@
     "resolutions": ["4K"],
     "caseSize": "Medium",
     "caseType": "Windowed",
-    "chipBrand": "NVIDIA",
+    "chipBrand": "Nvidia",
     "type": {
       "socket": 1200,
       "cpu": "Ryzen 9",
@@ -711,7 +806,7 @@
     "resolutions": ["1080", "1440", "4K"],
     "caseSize": "Small",
     "caseType": "Default",
-    "chipBrand": "NVIDIA",
+    "chipBrand": "Nvidia",
     "type": {
       "socket": 1700,
       "cpu": "Core i9",
@@ -723,8 +818,8 @@
   },
   {
     "id": "bc418e3d-6788-4132-9a4f-560c245cbe6c",
-    "title": "Radeon RX 7900 Workhorse #37",
-    "image": "/assets/pc-pics/amd.png",
+    "title": "RADEON RX 7900 Workhorse #37",
+    "image": "/assets/pc-pics/AMD.png",
     "price": 2529,
     "realPrice": 3259,
     "resolutions": ["1080", "1440"],
@@ -743,7 +838,7 @@
   {
     "id": "c2ca167f-2a27-4b6f-bf7f-5301120121a7",
     "title": "NVIDIA Studio Creator Box #38",
-    "image": "/assets/pc-pics/amd.png",
+    "image": "/assets/pc-pics/AMD.png",
     "price": 3162,
     "realPrice": 3826,
     "resolutions": ["4K"],
@@ -768,7 +863,7 @@
     "resolutions": ["1080"],
     "caseSize": "Large",
     "caseType": "Windowed",
-    "chipBrand": "Radeon",
+    "chipBrand": "RADEON",
     "type": {
       "socket": 1151,
       "cpu": "Ryzen 5",
@@ -787,7 +882,7 @@
     "resolutions": ["4K"],
     "caseSize": "Large",
     "caseType": "Default",
-    "chipBrand": "Radeon",
+    "chipBrand": "RADEON",
     "type": {
       "socket": "AM4",
       "cpu": "Core i5",
@@ -800,7 +895,7 @@
   {
     "id": "d9f28fa0-195f-46b6-8dd7-f83f11214ff5",
     "title": "NVIDIA RTX 4080 Beast Rig #41",
-    "image": "/assets/pc-pics/amd.png",
+    "image": "/assets/pc-pics/AMD.png",
     "price": 2333,
     "realPrice": 2712,
     "resolutions": ["4K"],
@@ -825,7 +920,7 @@
     "resolutions": ["4K"],
     "caseSize": "Large",
     "caseType": "Windowed",
-    "chipBrand": "NVIDIA",
+    "chipBrand": "Nvidia",
     "type": {
       "socket": "AM5",
       "cpu": "Core i9",
@@ -837,14 +932,14 @@
   },
   {
     "id": "2111d7dc-f4cf-430a-b621-dab72289ddab",
-    "title": "Radeon Gaming Ultra Tower #43",
+    "title": "RADEON Gaming Ultra Tower #43",
     "image": "/assets/pc-pics/intel.png",
     "price": 2380,
     "realPrice": 2927,
     "resolutions": ["1080"],
     "caseSize": "Large",
     "caseType": "Default",
-    "chipBrand": "Radeon",
+    "chipBrand": "RADEON",
     "type": {
       "socket": "AM5",
       "cpu": "Ryzen 7",
@@ -863,7 +958,7 @@
     "resolutions": ["1080", "1440", "4K"],
     "caseSize": "Medium",
     "caseType": "Default",
-    "chipBrand": "Radeon",
+    "chipBrand": "RADEON",
     "type": {
       "socket": 1200,
       "cpu": "Core i9",
@@ -876,7 +971,7 @@
   {
     "id": "6c0f5e8b-427e-4760-9800-da0989d3fa1c",
     "title": "Mini PC for Everyday Use #45",
-    "image": "/assets/pc-pics/amd.png",
+    "image": "/assets/pc-pics/AMD.png",
     "price": 1304,
     "realPrice": 1537,
     "resolutions": ["1080"],
@@ -939,7 +1034,7 @@
     "resolutions": ["1440"],
     "caseSize": "Large",
     "caseType": "Windowed",
-    "chipBrand": "NVIDIA",
+    "chipBrand": "Nvidia",
     "type": {
       "socket": 1151,
       "cpu": "Core i7",
@@ -951,14 +1046,14 @@
   },
   {
     "id": "f17e5967-08cd-4fe6-a523-c1a4a1f7bf16",
-    "title": "Radeon RX 7900 Workhorse #49",
+    "title": "RADEON RX 7900 Workhorse #49",
     "image": "/assets/pc-pics/intel.png",
     "price": 3518,
     "realPrice": 4541,
     "resolutions": ["1080"],
     "caseSize": "Large",
     "caseType": "Default",
-    "chipBrand": "NVIDIA",
+    "chipBrand": "Nvidia",
     "type": {
       "socket": 1700,
       "cpu": "Core i7",
@@ -985,6 +1080,576 @@
       "memory": "Up to 128GB",
       "storage": "Up to 2 SSDs",
       "graphics": "Integrated + Dedicated"
+    }
+  },
+  {
+    "id": "b1e20462-c778-4bd6-bbd1-c018c4b33d37",
+    "title": "RADEON Core i7 Workhorse #1",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 2856.38,
+    "realPrice": 3522.68,
+    "resolutions": ["1080"],
+    "caseSize": "Large",
+    "caseType": "Windowed",
+    "chipBrand": "RADEON",
+    "type": {
+      "socket": "LGA1700",
+      "cpu": "Ryzen 7",
+      "chipset": "AMD B550",
+      "memory": "Up to 64GB",
+      "storage": "Up to 2 drives",
+      "graphics": "Supports up to 2 video cards"
+    }
+  },
+  {
+    "id": "47595b75-8a34-4f25-9fa9-39c02d01acb5",
+    "title": "ARC Core i9 Workhorse #2",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 4974.4,
+    "realPrice": 5954.49,
+    "resolutions": ["1080", "1440"],
+    "caseSize": "Small",
+    "caseType": "Windowed",
+    "chipBrand": "ARC",
+    "type": {
+      "socket": "LGA1700",
+      "cpu": "Core i7",
+      "chipset": "AMD B550",
+      "memory": "Up to 64GB",
+      "storage": "Up to 6 drives",
+      "graphics": "Supports up to 2 video cards"
+    }
+  },
+  {
+    "id": "42c38910-a90c-4413-8d67-532eab86ec81",
+    "title": "RADEON Ryzen 9 Workhorse #3",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 3266.79,
+    "realPrice": 4212.78,
+    "resolutions": ["1080", "1440"],
+    "caseSize": "Large",
+    "caseType": "Default",
+    "chipBrand": "ARC",
+    "type": {
+      "socket": "LGA1200",
+      "cpu": "Ryzen 9",
+      "chipset": "AMD X570",
+      "memory": "Up to 512GB",
+      "storage": "Up to 6 drives",
+      "graphics": "Supports integrated graphics only"
+    }
+  },
+  {
+    "id": "2d7088f4-fa26-4746-9f19-cc602114f72b",
+    "title": "RADEON Ryzen 9 Workhorse #4",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 6963.02,
+    "realPrice": 8285.78,
+    "resolutions": ["1080"],
+    "caseSize": "Medium",
+    "caseType": "Windowed",
+    "chipBrand": "RADEON",
+    "type": {
+      "socket": "TRX4",
+      "cpu": "Ryzen 9",
+      "chipset": "AMD X570",
+      "memory": "Up to 512GB",
+      "storage": "Up to 6 drives",
+      "graphics": "Supports integrated graphics only"
+    }
+  },
+  {
+    "id": "94e427ca-69f4-4cf7-b821-397016814c9a",
+    "title": "ARC Ryzen 5 Workhorse #5",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 6437.26,
+    "realPrice": 7856.06,
+    "resolutions": ["1080", "1440"],
+    "caseSize": "Small",
+    "caseType": "Default",
+    "chipBrand": "ARC",
+    "type": {
+      "socket": "LGA1700",
+      "cpu": "Ryzen 9",
+      "chipset": "Intel Z590",
+      "memory": "Up to 64GB",
+      "storage": "Up to 2 drives",
+      "graphics": "Supports up to 1 video card"
+    }
+  },
+  {
+    "id": "7b703eac-fa9a-4428-84aa-b49b540a89d4",
+    "title": "ARC Ryzen 7 Workhorse #6",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 4678.67,
+    "realPrice": 5959.59,
+    "resolutions": ["1080"],
+    "caseSize": "Large",
+    "caseType": "Windowed",
+    "chipBrand": "RADEON",
+    "type": {
+      "socket": "TRX4",
+      "cpu": "Ryzen 5",
+      "chipset": "AMD B550",
+      "memory": "Up to 64GB",
+      "storage": "Up to 6 drives",
+      "graphics": "Supports up to 2 video cards"
+    }
+  },
+  {
+    "id": "d70a1677-74bd-4669-a986-b07757edfc71",
+    "title": "RADEON Ryzen 7 Workhorse #7",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 2657.73,
+    "realPrice": 3171.22,
+    "resolutions": ["1080"],
+    "caseSize": "Small",
+    "caseType": "Windowed",
+    "chipBrand": "ARC",
+    "type": {
+      "socket": "AM4",
+      "cpu": "Ryzen 5",
+      "chipset": "Intel Z590",
+      "memory": "Up to 128GB",
+      "storage": "Up to 9 hard drives or SSD drives",
+      "graphics": "Supports integrated graphics only"
+    }
+  },
+  {
+    "id": "0d6d81f0-1ee0-4c9b-af37-4269a6255e79",
+    "title": "ARC Core i5 Workhorse #8",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 6292.03,
+    "realPrice": 8082.87,
+    "resolutions": ["1080", "1440", "4K"],
+    "caseSize": "Large",
+    "caseType": "Windowed",
+    "chipBrand": "RADEON",
+    "type": {
+      "socket": "LGA1200",
+      "cpu": "Core i5",
+      "chipset": "Intel B660",
+      "memory": "Up to 512GB",
+      "storage": "Up to 6 drives",
+      "graphics": "Supports integrated graphics only"
+    }
+  },
+  {
+    "id": "95a68bdd-fbe1-498e-846f-595d71b4a3fa",
+    "title": "NVIDIA Core i5 Workhorse #9",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 3898.61,
+    "realPrice": 4706.15,
+    "resolutions": ["1080", "1440"],
+    "caseSize": "Small",
+    "caseType": "Default",
+    "chipBrand": "RADEON",
+    "type": {
+      "socket": "AM4",
+      "cpu": "Ryzen 7",
+      "chipset": "AMD X570",
+      "memory": "Up to 512GB",
+      "storage": "Up to 4 drives",
+      "graphics": "Supports integrated graphics only"
+    }
+  },
+  {
+    "id": "ea31d6d1-415b-46ca-8a9b-90bd0ab39810",
+    "title": "NVIDIA Ryzen 7 Workhorse #10",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 1245.25,
+    "realPrice": 1411.89,
+    "resolutions": ["1080", "1440", "4K"],
+    "caseSize": "Small",
+    "caseType": "Windowed",
+    "chipBrand": "Nvidia",
+    "type": {
+      "socket": "AM4",
+      "cpu": "Ryzen 7",
+      "chipset": "Intel Z590",
+      "memory": "Up to 256GB",
+      "storage": "Up to 9 hard drives or SSD drives",
+      "graphics": "Supports up to 1 video card"
+    }
+  },
+  {
+    "id": "670e2d4b-e522-4cf3-baff-66fefb89a6bb",
+    "title": "RADEON Core i5 Workhorse #11",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 3602.61,
+    "realPrice": 4185.09,
+    "resolutions": ["1080"],
+    "caseSize": "Medium",
+    "caseType": "Windowed",
+    "chipBrand": "Nvidia",
+    "type": {
+      "socket": "AM4",
+      "cpu": "Ryzen 9",
+      "chipset": "AMD B550",
+      "memory": "Up to 64GB",
+      "storage": "Up to 4 drives",
+      "graphics": "Supports up to 1 video card"
+    }
+  },
+  {
+    "id": "307162cd-4fc6-4f4e-841d-a2880d36481d",
+    "title": "ARC Core i7 Workhorse #12",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 4850.64,
+    "realPrice": 6041.6,
+    "resolutions": ["1080"],
+    "caseSize": "Large",
+    "caseType": "Windowed",
+    "chipBrand": "Nvidia",
+    "type": {
+      "socket": "LGA1700",
+      "cpu": "Core i7",
+      "chipset": "AMD X570",
+      "memory": "Up to 64GB",
+      "storage": "Up to 2 drives",
+      "graphics": "Supports up to 2 video cards"
+    }
+  },
+  {
+    "id": "1e178887-d11e-4045-8262-d3b4a56aca15",
+    "title": "RADEON Ryzen 9 Workhorse #13",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 4422.61,
+    "realPrice": 5314.51,
+    "resolutions": ["1080", "1440"],
+    "caseSize": "Large",
+    "caseType": "Default",
+    "chipBrand": "RADEON",
+    "type": {
+      "socket": "AM4",
+      "cpu": "Core i5",
+      "chipset": "AMD B550",
+      "memory": "Up to 512GB",
+      "storage": "Up to 9 hard drives or SSD drives",
+      "graphics": "Supports integrated graphics only"
+    }
+  },
+  {
+    "id": "6e558884-fad2-4e82-9e3a-90d85390f409",
+    "title": "NVIDIA Core i7 Workhorse #14",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 6940.88,
+    "realPrice": 7894.99,
+    "resolutions": ["1080"],
+    "caseSize": "Medium",
+    "caseType": "Windowed",
+    "chipBrand": "RADEON",
+    "type": {
+      "socket": "TRX4",
+      "cpu": "Core i5",
+      "chipset": "Intel Z590",
+      "memory": "Up to 512GB",
+      "storage": "Up to 9 hard drives or SSD drives",
+      "graphics": "Supports up to 1 video card"
+    }
+  },
+  {
+    "id": "ce27b0ae-f987-4bad-9e98-37c1a53814f9",
+    "title": "ARC Ryzen 9 Workhorse #15",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 3217.4,
+    "realPrice": 3738.83,
+    "resolutions": ["1080"],
+    "caseSize": "Medium",
+    "caseType": "Default",
+    "chipBrand": "RADEON",
+    "type": {
+      "socket": "LGA1200",
+      "cpu": "Core i5",
+      "chipset": "AMD X570",
+      "memory": "Up to 128GB",
+      "storage": "Up to 9 hard drives or SSD drives",
+      "graphics": "Supports up to 1 video card"
+    }
+  },
+  {
+    "id": "cd65fc9d-70b9-4fb6-9b4b-b9d69d8d8903",
+    "title": "ARC Core i7 Workhorse #16",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 5840.17,
+    "realPrice": 6804.72,
+    "resolutions": ["1080"],
+    "caseSize": "Small",
+    "caseType": "Windowed",
+    "chipBrand": "ARC",
+    "type": {
+      "socket": "LGA1200",
+      "cpu": "Core i9",
+      "chipset": "AMD B550",
+      "memory": "Up to 256GB",
+      "storage": "Up to 9 hard drives or SSD drives",
+      "graphics": "Supports up to 2 video cards"
+    }
+  },
+  {
+    "id": "dd249b12-c7b2-45e5-abd1-1c78d0cd2e6c",
+    "title": "NVIDIA Core i9 Workhorse #17",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 4075.93,
+    "realPrice": 4708.52,
+    "resolutions": ["1080"],
+    "caseSize": "Small",
+    "caseType": "Windowed",
+    "chipBrand": "Nvidia",
+    "type": {
+      "socket": "LGA1200",
+      "cpu": "Core i7",
+      "chipset": "Intel Z590",
+      "memory": "Up to 128GB",
+      "storage": "Up to 9 hard drives or SSD drives",
+      "graphics": "Supports integrated graphics only"
+    }
+  },
+  {
+    "id": "7ebdfd9b-f5b4-4062-80fb-c2c750792a62",
+    "title": "RADEON Ryzen 9 Workhorse #18",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 4180.48,
+    "realPrice": 4963.95,
+    "resolutions": ["1080", "1440", "4K"],
+    "caseSize": "Small",
+    "caseType": "Default",
+    "chipBrand": "Nvidia",
+    "type": {
+      "socket": "LGA1200",
+      "cpu": "Ryzen 9",
+      "chipset": "AMD B550",
+      "memory": "Up to 512GB",
+      "storage": "Up to 2 drives",
+      "graphics": "Supports up to 2 video cards"
+    }
+  },
+  {
+    "id": "1836ab3e-f1f8-4874-9955-cb1e153ef559",
+    "title": "ARC Ryzen 7 Workhorse #19",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 1677.79,
+    "realPrice": 2043.63,
+    "resolutions": ["1080"],
+    "caseSize": "Small",
+    "caseType": "Windowed",
+    "chipBrand": "ARC",
+    "type": {
+      "socket": "TRX4",
+      "cpu": "Core i7",
+      "chipset": "Intel Z590",
+      "memory": "Up to 64GB",
+      "storage": "Up to 2 drives",
+      "graphics": "Supports up to 1 video card"
+    }
+  },
+  {
+    "id": "8a5c36c2-dcff-4120-92dd-778f6c592517",
+    "title": "RADEON Core i9 Workhorse #20",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 3025.05,
+    "realPrice": 3780.3,
+    "resolutions": ["1080", "1440"],
+    "caseSize": "Small",
+    "caseType": "Windowed",
+    "chipBrand": "Nvidia",
+    "type": {
+      "socket": "LGA1200",
+      "cpu": "Core i9",
+      "chipset": "Intel Z590",
+      "memory": "Up to 512GB",
+      "storage": "Up to 4 drives",
+      "graphics": "Supports integrated graphics only"
+    }
+  },
+  {
+    "id": "9cfb4423-c69e-4b45-8eb2-b837070e353c",
+    "title": "RADEON Core i5 Workhorse #21",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 4214.57,
+    "realPrice": 5467.56,
+    "resolutions": ["1080"],
+    "caseSize": "Small",
+    "caseType": "Windowed",
+    "chipBrand": "Nvidia",
+    "type": {
+      "socket": "AM4",
+      "cpu": "Ryzen 5",
+      "chipset": "AMD B550",
+      "memory": "Up to 256GB",
+      "storage": "Up to 4 drives",
+      "graphics": "Supports integrated graphics only"
+    }
+  },
+  {
+    "id": "a6c03654-a87c-4ec6-9e7a-3c3c0f2835d1",
+    "title": "RADEON Ryzen 5 Workhorse #22",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 4006.26,
+    "realPrice": 4622.63,
+    "resolutions": ["1080"],
+    "caseSize": "Small",
+    "caseType": "Default",
+    "chipBrand": "RADEON",
+    "type": {
+      "socket": "LGA1700",
+      "cpu": "Core i7",
+      "chipset": "AMD X570",
+      "memory": "Up to 64GB",
+      "storage": "Up to 2 drives",
+      "graphics": "Supports up to 2 video cards"
+    }
+  },
+  {
+    "id": "1592084b-1d22-4a8e-ab12-fefade32931f",
+    "title": "NVIDIA Core i7 Workhorse #23",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 5515.53,
+    "realPrice": 6904.49,
+    "resolutions": ["1080"],
+    "caseSize": "Small",
+    "caseType": "Windowed",
+    "chipBrand": "RADEON",
+    "type": {
+      "socket": "LGA1700",
+      "cpu": "Ryzen 5",
+      "chipset": "Intel Z590",
+      "memory": "Up to 512GB",
+      "storage": "Up to 6 drives",
+      "graphics": "Supports up to 2 video cards"
+    }
+  },
+  {
+    "id": "013e5bd6-9f4d-41c3-bd46-a0ba418319bf",
+    "title": "NVIDIA Ryzen 9 Workhorse #24",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 3570.22,
+    "realPrice": 4451.23,
+    "resolutions": ["1080", "1440", "4K"],
+    "caseSize": "Medium",
+    "caseType": "Windowed",
+    "chipBrand": "RADEON",
+    "type": {
+      "socket": "LGA1700",
+      "cpu": "Core i5",
+      "chipset": "AMD B550",
+      "memory": "Up to 256GB",
+      "storage": "Up to 4 drives",
+      "graphics": "Supports up to 1 video card"
+    }
+  },
+  {
+    "id": "18b004c0-dd02-4033-954b-8936bcfe94ba",
+    "title": "RADEON Core i5 Workhorse #25",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 2312.81,
+    "realPrice": 2832.43,
+    "resolutions": ["1080"],
+    "caseSize": "Large",
+    "caseType": "Windowed",
+    "chipBrand": "Nvidia",
+    "type": {
+      "socket": "LGA1700",
+      "cpu": "Ryzen 9",
+      "chipset": "AMD X570",
+      "memory": "Up to 512GB",
+      "storage": "Up to 6 drives",
+      "graphics": "Supports integrated graphics only"
+    }
+  },
+  {
+    "id": "30d91be1-b7e9-4933-a33a-5db710f20e05",
+    "title": "RADEON Core i9 Workhorse #26",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 6602.44,
+    "realPrice": 7458.56,
+    "resolutions": ["1080"],
+    "caseSize": "Medium",
+    "caseType": "Windowed",
+    "chipBrand": "ARC",
+    "type": {
+      "socket": "TRX4",
+      "cpu": "Ryzen 9",
+      "chipset": "Intel Z590",
+      "memory": "Up to 64GB",
+      "storage": "Up to 9 hard drives or SSD drives",
+      "graphics": "Supports integrated graphics only"
+    }
+  },
+  {
+    "id": "145952c5-b63b-49c8-839f-3218e86c7b57",
+    "title": "RADEON Core i9 Workhorse #27",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 6245.8,
+    "realPrice": 7329.66,
+    "resolutions": ["1080", "1440", "4K"],
+    "caseSize": "Large",
+    "caseType": "Default",
+    "chipBrand": "RADEON",
+    "type": {
+      "socket": "AM4",
+      "cpu": "Core i9",
+      "chipset": "AMD X570",
+      "memory": "Up to 512GB",
+      "storage": "Up to 9 hard drives or SSD drives",
+      "graphics": "Supports integrated graphics only"
+    }
+  },
+  {
+    "id": "5a6a08d0-6ffc-4678-8086-4e078779aa54",
+    "title": "RADEON Core i7 Workhorse #28",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 519.11,
+    "realPrice": 629.9,
+    "resolutions": ["1080", "1440"],
+    "caseSize": "Large",
+    "caseType": "Default",
+    "chipBrand": "ARC",
+    "type": {
+      "socket": "LGA1200",
+      "cpu": "Ryzen 9",
+      "chipset": "Intel Z590",
+      "memory": "Up to 64GB",
+      "storage": "Up to 6 drives",
+      "graphics": "Supports up to 1 video card"
+    }
+  },
+  {
+    "id": "db7800c6-7fd4-48f6-8414-33e05f3a00af",
+    "title": "RADEON Ryzen 5 Workhorse #29",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 1829.67,
+    "realPrice": 2202.71,
+    "resolutions": ["1080", "1440"],
+    "caseSize": "Large",
+    "caseType": "Default",
+    "chipBrand": "Nvidia",
+    "type": {
+      "socket": "LGA1200",
+      "cpu": "Ryzen 9",
+      "chipset": "Intel B660",
+      "memory": "Up to 64GB",
+      "storage": "Up to 4 drives",
+      "graphics": "Supports integrated graphics only"
+    }
+  },
+  {
+    "id": "e81ff1ec-8a29-493f-8134-3b0e0819d9f4",
+    "title": "ARC Ryzen 5 Workhorse #30",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 1055.53,
+    "realPrice": 1302.22,
+    "resolutions": ["1080", "1440", "4K"],
+    "caseSize": "Medium",
+    "caseType": "Default",
+    "chipBrand": "ARC",
+    "type": {
+      "socket": "LGA1200",
+      "cpu": "Core i9",
+      "chipset": "Intel Z590",
+      "memory": "Up to 256GB",
+      "storage": "Up to 6 drives",
+      "graphics": "Supports up to 2 video cards"
     }
   }
 ]

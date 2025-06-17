@@ -22,7 +22,7 @@ export default function WorkStationPage() {
   const [selectedApps, setSelectedApps] = useState([]);
   const [selectedFilter, setSelectedFilter] = useState(null);
   const [selectedCaseSize, setSelectedCaseSize] = useState(null);
-  const [selectedChipBrand, setSelectedChipBrand] = useState(null);
+  const [selectedChipBrand, setSelectedChipBrand] = useState([]);
 
   const [minValue, setMinValue] = useState(0);
   const [maxValue, setMaxValue] = useState(1000);
@@ -48,7 +48,7 @@ export default function WorkStationPage() {
       className="w-full min-h-screen flex flex-col justify-center items-center px-4"
     >
       <div className="flex items-center justify-center gap-4 text-center mb-4">
-        <h3 className="text-[22px] font-bold">{title}</h3>
+        <h3 className="text-lg md:text-[22px] font-bold">{title}</h3>
         <InfoTooltip show={showInfo} setShow={setShowInfo} />
       </div>
       {children}
@@ -61,7 +61,7 @@ export default function WorkStationPage() {
                 setCurrentStep(currentStep - 1);
               }
             }}
-            className="border border-blue-500 py-2 px-4 rounded"
+            className="border border-blue-500 text-blue-500 py-2 px-4 rounded"
           >
             Previous
           </button>
@@ -86,26 +86,34 @@ export default function WorkStationPage() {
             Next Step
           </button>
         )}
-        {index === 3 && (
-          <Link
-            href={{
-              pathname: "/results",
-              query: {
-                selectedApps: selectedApps.join(","),
-                selectedFilter,
-                selectedCaseSize: selectedCaseSize?.type,
-                selectedChipBrand: selectedChipBrand?.type,
-                minValue,
-                maxValue,
-                type: "workstation",
-              },
-            }}
-          >
-            <button className="bg-green-500 text-white py-2 px-4 rounded">
-              View Results
+        {index === 3 &&
+          (selectedApps.length && selectedChipBrand && selectedCaseSize ? (
+            <Link
+              href={{
+                pathname: "/results",
+                query: {
+                  selectedApps: selectedApps.join(","),
+                  selectedFilter,
+                  selectedCaseSize: selectedCaseSize?.type,
+                  selectedChipBrand: selectedChipBrand.join(","),
+                  minValue,
+                  maxValue,
+                  type: "workstation",
+                },
+              }}
+            >
+              <button className="bg-green-500 text-white py-2 px-4 rounded">
+                View Results
+              </button>
+            </Link>
+          ) : (
+            <button
+              className="bg-gray-300 text-white py-2 px-4 rounded cursor-not-allowed"
+              disabled
+            >
+              Complete all steps
             </button>
-          </Link>
-        )}
+          ))}
       </div>
     </div>
   );
@@ -118,7 +126,9 @@ export default function WorkStationPage() {
         className="w-full min-h-screen flex flex-col justify-center items-center px-4"
       >
         <div className="flex items-center justify-center gap-4 text-center mb-4">
-          <h3 className="text-[22px] font-bold">Choose your PC Builder</h3>
+          <h3 className="text-lg md:text-[22px] font-bold">
+            Choose your PC Builder
+          </h3>
           <InfoTooltip show={showInfo} setShow={setShowInfo} />
         </div>
 
@@ -154,33 +164,71 @@ export default function WorkStationPage() {
         title="Which Industry Best Describes Your Field of Work?"
         index={1}
       >
-        <div className="w-full flex flex-col justify-center items-center">
-          <div className="grid grid-cols-2 md:flex justify-center mb-6">
-            {filters.map((f) => (
-              <button
-                key={f.id}
-                onClick={() => setSelectedFilter(f.label)}
-                className={clsx(
-                  "px-4 py-2 text-sm font-medium border first:rounded-l las:rounded-r transition-all",
-                  selectedFilter === f.label
-                    ? "bg-blue-500 text-white border-blue-500 scale-105"
-                    : "bg-white text-gray-900 border-gray-200 hover:bg-gray-100 hover:text-blue-700"
-                )}
-              >
-                {f.label}
-              </button>
-            ))}
+        <div className="w-full max-w-6xl flex flex-col justify-center items-center">
+          <div className="w-full mb-6">
+            <div className="hidden md:flex flex-wrap justify-center bg-white rounded-lg border border-gray-200 p-2 gap-2 w-full">
+              {filters.map((f) => (
+                <button
+                  key={f.id}
+                  onClick={() => setSelectedFilter(f.label)}
+                  className={clsx(
+                    "flex-1 min-w-[120px] max-w-[220px] text-center px-4 py-3 text-sm font-medium transition-all duration-200 rounded-md break-words whitespace-normal",
+                    selectedFilter === f.label
+                      ? "bg-blue-500 text-white shadow-sm"
+                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                  )}
+                >
+                  {f.label}
+                </button>
+              ))}
+            </div>
+
+            <div className="md:hidden flex flex-col gap-2 w-full">
+              {filters.map((f) => (
+                <button
+                  key={f.id}
+                  onClick={() => setSelectedFilter(f.label)}
+                  className={clsx(
+                    "w-full px-4 py-3 text-sm font-medium transition-all duration-200 rounded-lg break-words whitespace-normal text-left",
+                    selectedFilter === f.label
+                      ? "bg-blue-500 text-white shadow-sm"
+                      : "bg-white text-gray-700 border border-gray-200 hover:text-blue-600 hover:bg-gray-50"
+                  )}
+                >
+                  {f.label}
+                </button>
+              ))}
+            </div>
           </div>
-          <div className="grid max-h-[150px] md:max-h-max overflow-y-auto md:overflow-hidden grid-cols-2 md:grid-cols-4 gap-5">
-            {apps.map((app) => (
-              <AppCard
-                key={app.id}
-                item={app}
-                selected={selectedApps}
-                onClick={setSelectedApps}
-                multiple
-              />
-            ))}
+
+          <div className="w-full">
+            <div className="hidden md:block">
+              <div className="grid grid-cols-4 gap-6 px-4">
+                {apps.slice(0, 12).map((app) => (
+                  <AppCard
+                    key={app.id}
+                    item={app}
+                    selected={selectedApps}
+                    onClick={setSelectedApps}
+                    multiple
+                  />
+                ))}
+              </div>
+            </div>
+
+            <div className="md:hidden max-h-[400px] overflow-y-auto custom-scrollbar">
+              <div className="grid grid-cols-2 gap-4 px-4 pb-4">
+                {apps.map((app) => (
+                  <AppCard
+                    key={app.id}
+                    item={app}
+                    selected={selectedApps}
+                    onClick={setSelectedApps}
+                    multiple
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </Section>
@@ -206,6 +254,7 @@ export default function WorkStationPage() {
               onClick={setSelectedChipBrand}
               size={120}
               isChip
+              multiple={true}
             />
           ))}
         </div>

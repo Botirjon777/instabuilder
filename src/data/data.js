@@ -1,8 +1,41 @@
-export const games = Array.from({ length: 24 }, (_, i) => ({
-  id: i + 1,
-  title: "CS2",
-  image: "/assets/games/cs2.jpg",
-}));
+const localImages = [
+  "/assets/games/cs2.jpg",
+  "/assets/games/ah.png",
+  "/assets/games/awii.png",
+  "/assets/games/bg.jpg",
+  "/assets/games/cod.jpg",
+];
+
+function getRandomImage() {
+  return localImages[Math.floor(Math.random() * localImages.length)];
+}
+
+export const games = [
+  { id: 1, title: "Counter-Strike 2", image: getRandomImage() },
+  { id: 2, title: "Valorant", image: getRandomImage() },
+  { id: 3, title: "Fortnite", image: getRandomImage() },
+  { id: 4, title: "Apex Legends", image: getRandomImage() },
+  { id: 5, title: "Call of Duty: Warzone", image: getRandomImage() },
+  { id: 6, title: "PUBG: Battlegrounds", image: getRandomImage() },
+  { id: 7, title: "League of Legends", image: getRandomImage() },
+  { id: 8, title: "Dota 2", image: getRandomImage() },
+  { id: 9, title: "Overwatch 2", image: getRandomImage() },
+  { id: 10, title: "Minecraft", image: getRandomImage() },
+  { id: 11, title: "GTA V", image: getRandomImage() },
+  { id: 12, title: "The Witcher 3", image: getRandomImage() },
+  { id: 13, title: "Cyberpunk 2077", image: getRandomImage() },
+  { id: 14, title: "Red Dead Redemption 2", image: getRandomImage() },
+  { id: 15, title: "Elden Ring", image: getRandomImage() },
+  { id: 16, title: "Rainbow Six Siege", image: getRandomImage() },
+  { id: 17, title: "Rocket League", image: getRandomImage() },
+  { id: 18, title: "Escape from Tarkov", image: getRandomImage() },
+  { id: 19, title: "Battlefield 2042", image: getRandomImage() },
+  { id: 20, title: "Starfield", image: getRandomImage() },
+  { id: 21, title: "Hogwarts Legacy", image: getRandomImage() },
+  { id: 22, title: "Far Cry 6", image: getRandomImage() },
+  { id: 23, title: "Assassin's Creed Valhalla", image: getRandomImage() },
+  { id: 24, title: "God of War", image: getRandomImage() },
+];
 
 export const caseSizes = [
   { id: 1, type: "Large", image: "/assets/cases/case-sizes/large.png" },
@@ -87,58 +120,58 @@ export const apps = [
   },
   {
     id: 2,
-    title: "Gaming",
-    image: "/assets/apps/ae.png",
+    title: "Dimension",
+    image: "/assets/apps/dn.png",
   },
   {
     id: 3,
-    title: "Gaming",
-    image: "/assets/apps/ae.png",
+    title: "Illustrator",
+    image: "/assets/apps/ai.png",
   },
   {
     id: 4,
-    title: "Gaming",
-    image: "/assets/apps/ae.png",
+    title: "Premiere Pro",
+    image: "/assets/apps/pr.png",
   },
   {
     id: 5,
-    title: "Gaming",
-    image: "/assets/apps/ae.png",
+    title: "Lightroom",
+    image: "/assets/apps/lr.png",
   },
   {
     id: 6,
-    title: "Gaming",
-    image: "/assets/apps/ae.png",
+    title: "Photoshop",
+    image: "/assets/apps/ps.png",
   },
   {
     id: 7,
-    title: "Gaming",
-    image: "/assets/apps/ae.png",
+    title: "3ds Max",
+    image: "/assets/apps/3dsmax.png",
   },
   {
     id: 8,
-    title: "Gaming",
-    image: "/assets/apps/ae.png",
+    title: "Arnold",
+    image: "/assets/apps/arnold.png",
   },
   {
     id: 9,
-    title: "Gaming",
-    image: "/assets/apps/ae.png",
+    title: "Inventor",
+    image: "/assets/apps/inventor.png",
   },
   {
     id: 10,
-    title: "Gaming",
-    image: "/assets/apps/ae.png",
+    title: "Maya",
+    image: "/assets/apps/maya.png",
   },
   {
     id: 11,
-    title: "Gaming",
-    image: "/assets/apps/ae.png",
+    title: "AutoCAD",
+    image: "/assets/apps/autocad.png",
   },
   {
     id: 12,
-    title: "Gaming",
-    image: "/assets/apps/ae.png",
+    title: "Revit",
+    image: "/assets/apps/revit.png",
   },
 ];
 

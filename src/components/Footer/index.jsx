@@ -84,7 +84,7 @@ export default function Footer() {
 
       <button
         onClick={scrollToTop}
-        className="fixed bottom-6 bg-[#3f3f3f] text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg z-50"
+        className="fixed right-5 bottom-6 bg-[#3f3f3f] text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg z-50"
       >
         <IoIosArrowUp size={24} />
       </button>
