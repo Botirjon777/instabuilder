@@ -34,7 +34,7 @@ export default function SelectedCard({
         onClick={handleClick}
         className={clsx(
           "relative cursor-pointer rounded-lg overflow-hidden transition-all duration-200 hover:scale-105",
-          "w-[120px] h-[160px]",
+          "w-[95px] md:w-[120px] h-[139px] md:h-[160px]",
           isSelected && "ring-2 ring-blue-500 ring-offset-2"
         )}
       >
@@ -71,7 +71,7 @@ export default function SelectedCard({
 
   const aspectClass =
     aspect === "tasks"
-      ? "w-full aspect-[5/1] md:aspect-[4/1]"
+      ? "w-full min-h-[110px] aspect-[5/1] md:aspect-[4/1]"
       : "w-full max-w-[200px] aspect-[4/3]";
   return (
     <div

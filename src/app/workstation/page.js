@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import clsx from "clsx";
+import { usePathname } from "next/navigation";
 
 import { apps, chip_brands, case_sizes, filters, steps2 } from "@/data/data";
 
@@ -16,6 +17,8 @@ import PriceRangeSlider from "@/components/PriceRangeSlider";
 export default function WorkStationPage() {
   const sectionsRef = [useRef(), useRef(), useRef(), useRef()];
   const [currentSection, setCurrentSection] = useState(0);
+
+  const pathname = usePathname();
 
   const [showInfo, setShowInfo] = useState(false);
 
@@ -37,10 +40,25 @@ export default function WorkStationPage() {
     };
   }, []);
 
+  useEffect(() => {
+    if (pathname === "/workstation") {
+      setTimeout(() => {
+        sectionsRef[0].current?.scrollIntoView({ behavior: "auto" });
+        setCurrentSection(0);
+        setCurrentStep(1);
+      }, 10);
+    }
+  }, [pathname]);
+
   const scrollToSection = (index) => {
     setCurrentSection(index);
     sectionsRef[index].current?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const handlePriceChange = useCallback(({ minValue, maxValue }) => {
+    setMinValue(minValue);
+    setMaxValue(maxValue);
+  }, []);
 
   const Section = ({ title, children, index }) => (
     <div
@@ -86,34 +104,26 @@ export default function WorkStationPage() {
             Next Step
           </button>
         )}
-        {index === 3 &&
-          (selectedApps.length && selectedChipBrand && selectedCaseSize ? (
-            <Link
-              href={{
-                pathname: "/results",
-                query: {
-                  selectedApps: selectedApps.join(","),
-                  selectedFilter,
-                  selectedCaseSize: selectedCaseSize?.type,
-                  selectedChipBrand: selectedChipBrand.join(","),
-                  minValue,
-                  maxValue,
-                  type: "workstation",
-                },
-              }}
-            >
-              <button className="bg-green-500 text-white py-2 px-4 rounded">
-                View Results
-              </button>
-            </Link>
-          ) : (
-            <button
-              className="bg-gray-300 text-white py-2 px-4 rounded cursor-not-allowed"
-              disabled
-            >
-              Complete all steps
+        {index === 3 && (
+          <Link
+            href={{
+              pathname: "/results",
+              query: {
+                selectedApps: selectedApps.join(","),
+                selectedFilter,
+                selectedCaseSize: selectedCaseSize?.type,
+                selectedChipBrand: selectedChipBrand.join(","),
+                minValue,
+                maxValue,
+                type: "workstation",
+              },
+            }}
+          >
+            <button className="bg-green-500 text-white py-2 px-4 rounded">
+              View Results
             </button>
-          ))}
+          </Link>
+        )}
       </div>
     </div>
   );
@@ -136,10 +146,7 @@ export default function WorkStationPage() {
           min={0}
           max={7000}
           defaultValue={minValue}
-          onChange={({ minValue, maxValue }) => {
-            setMinValue(minValue);
-            setMaxValue(maxValue);
-          }}
+          onChange={handlePriceChange}
         />
 
         <div className="flex justify-center gap-4 mt-4">
