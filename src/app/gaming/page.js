@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import clsx from "clsx";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   games,
   caseSizes,
@@ -23,6 +24,8 @@ export default function GamingPage() {
   const sectionsRef = [useRef(), useRef(), useRef(), useRef(), useRef()];
   const [currentSection, setCurrentSection] = useState(0);
 
+  const pathname = usePathname();
+
   const [showInfo, setShowInfo] = useState(false);
 
   const [selectedGames, setSelectedGames] = useState([]);
@@ -35,6 +38,11 @@ export default function GamingPage() {
   const [maxValue, setMaxValue] = useState(1000);
 
   const [currentStep, setCurrentStep] = useState(1);
+
+  const handlePriceChange = useCallback(({ minValue, maxValue }) => {
+    setMinValue(minValue);
+    setMaxValue(maxValue);
+  }, []);
 
   const handleGameSelect = useCallback((gameId) => {
     setSelectedGames((prev) => {
@@ -53,6 +61,16 @@ export default function GamingPage() {
       document.body.style.overflow = original;
     };
   }, []);
+
+  useEffect(() => {
+    if (pathname === "/gaming") {
+      setTimeout(() => {
+        sectionsRef[0].current?.scrollIntoView({ behavior: "auto" });
+        setCurrentSection(0);
+        setCurrentStep(1);
+      }, 10);
+    }
+  }, [pathname]);
 
   const scrollToSection = (index) => {
     setCurrentSection(index);
@@ -103,38 +121,27 @@ export default function GamingPage() {
             Next Step
           </button>
         )}
-        {index === 4 &&
-          (selectedGames.length &&
-          selectedChipBrand &&
-          selectedCaseSize &&
-          selectedCaseType ? (
-            <Link
-              href={{
-                pathname: "/results",
-                query: {
-                  selectedGames: selectedGames.join(","),
-                  selectedResolution,
-                  selectedCaseSize: selectedCaseSize.type,
-                  selectedCaseType: selectedCaseType.type,
-                  selectedChipBrand: selectedChipBrand.join(","),
-                  minValue,
-                  maxValue,
-                  type: "gaming",
-                },
-              }}
-            >
-              <button className="bg-green-500 text-white py-2 px-4 rounded">
-                View Results
-              </button>
-            </Link>
-          ) : (
-            <button
-              className="bg-gray-300 text-white py-2 px-4 rounded cursor-not-allowed"
-              disabled
-            >
-              Complete all steps
+        {index === 4 && (
+          <Link
+            href={{
+              pathname: "/results",
+              query: {
+                selectedGames: selectedGames.join(","),
+                selectedResolution,
+                selectedCaseSize: selectedCaseSize?.type,
+                selectedCaseType: selectedCaseType?.type,
+                selectedChipBrand: selectedChipBrand.join(","),
+                minValue,
+                maxValue,
+                type: "gaming",
+              },
+            }}
+          >
+            <button className="bg-green-500 text-white py-2 px-4 rounded">
+              View Results
             </button>
-          ))}
+          </Link>
+        )}
       </div>
     </div>
   );
@@ -155,10 +162,7 @@ export default function GamingPage() {
           min={0}
           max={7000}
           defaultValue={minValue}
-          onChange={({ minValue, maxValue }) => {
-            setMinValue(minValue);
-            setMaxValue(maxValue);
-          }}
+          onChange={handlePriceChange}
         />
 
         <div className="flex justify-center gap-4 mt-4">

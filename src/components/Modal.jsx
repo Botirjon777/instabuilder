@@ -251,7 +251,7 @@ export default function Modal({
           ) : (
             <>
               {modalType === "Games" && (
-                <div className="grid grid-cols-7 gap-4 justify-items-center">
+                <div className="grid grid-cols-3 md:grid-cols-7 gap-4 justify-items-center">
                   {data.map((item) => (
                     <SelectedCard
                       key={item.id}
@@ -270,8 +270,8 @@ export default function Modal({
                 <div
                   className={clsx(
                     isWorkstationTasks
-                      ? "grid grid-cols-4 gap-6 justify-items-center"
-                      : "flex flex-wrap gap-4 justify-center"
+                      ? "grid grid-cols-2 md:grid-cols-4 gap-6 justify-items-center"
+                      : "grid grid-cols-2 md:flex md:flex-wrap gap-4 justify-center"
                   )}
                 >
                   {(isWorkstationTasks ? data.slice(0, 12) : data).map(

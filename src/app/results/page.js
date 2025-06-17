@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 import { RiArrowGoBackFill } from "react-icons/ri";
 
@@ -32,6 +32,11 @@ export default function ResultsPage() {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
 
+    const typeFromParams = params.get("type");
+    const effectivePageType =
+      typeFromParams === "workstation" ? "workstation" : "gaming";
+    setPageType(effectivePageType);
+
     setMinValue(Number(params.get("minValue")) || 0);
     setMaxValue(Number(params.get("maxValue")) || 7000);
     setSelectedResolution(params.get("selectedResolution") || "1080");
@@ -42,9 +47,11 @@ export default function ResultsPage() {
     );
 
     const caseSize = params.get("selectedCaseSize");
+
+    const source = effectivePageType === "gaming" ? caseSizes : case_sizes;
     setSelectedCaseSize(
       caseSize
-        ? caseSizes.find((c) => c.type.toLowerCase() === caseSize.toLowerCase())
+        ? source.find((c) => c.type.toLowerCase() === caseSize.toLowerCase())
         : null
     );
 
@@ -63,17 +70,6 @@ export default function ResultsPage() {
     setSelectedApps(apps ? apps.split(",").filter(Boolean).map(Number) : []);
 
     setSelectedFilter(params.get("selectedFilter") || null);
-    const case_size = params.get("selectedCaseSize");
-    setSelectedCaseSize(
-      caseSize
-        ? case_sizes.find(
-            (c) => c.type.toLowerCase() === case_size.toLowerCase()
-          )
-        : null
-    );
-
-    const typeFromParams = params.get("type");
-    setPageType(typeFromParams === "workstation" ? "workstation" : "gaming");
   }, []);
 
   useEffect(() => {
@@ -166,6 +162,11 @@ export default function ResultsPage() {
     setModalOpen(true);
   };
 
+  const handlePriceChange = useCallback(({ minValue, maxValue }) => {
+    setMinValue(minValue);
+    setMaxValue(maxValue);
+  }, []);
+
   return (
     <div className="flex flex-col items-center space-y-12">
       <div className="w-full flex justify-end p-4">
@@ -182,10 +183,7 @@ export default function ResultsPage() {
       <div className="flex flex-col md:flex-row items-center justify-center p-6 bg-white shadow rounded w-full gap-5 md:gap-10">
         <PriceRangeSlider
           defaultValue={minValue}
-          onChange={({ minValue, maxValue }) => {
-            setMinValue(minValue);
-            setMaxValue(maxValue);
-          }}
+          onChange={handlePriceChange}
           variant="summary"
         />
 
@@ -193,7 +191,7 @@ export default function ResultsPage() {
           {filterOptions.map(({ l, t }) => (
             <div
               key={l}
-              className="flex flex-col justify-center items-center border rounded-[8px] w-[148px] h-[62px] p-3 border-[#2198F3] hover:border-blue-400"
+              className="flex flex-col justify-center items-center border rounded-[8px] w-[100px] h-[90px] md:w-[148px] md:h-[62px] p-3 border-[#2198F3] hover:border-blue-400"
             >
               <span className="font-bold text-[18px]">{l}</span>
               <span
