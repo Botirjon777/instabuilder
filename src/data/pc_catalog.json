@@ -1,0 +1,990 @@
+[
+  {
+    "id": 1,
+    "title": "AMD Z790 Ultra Tower Workstation",
+    "image": "/assets/pc-pics/amd.png",
+    "price": 3300,
+    "realPrice": 3794,
+    "type": {
+      "socket": 1379,
+      "cpu": "Ryzen 5",
+      "chipset": "TRX40",
+      "memory": "Up to 256GB",
+      "storage": "Up to 12 drives",
+      "graphics": "Supports 2 GPUs"
+    },
+    "resolutions": ["HDR", "4K", "1080p", "1440p"],
+    "caseSize": "Large",
+    "caseType": "Default",
+    "chipBrand": "AMD"
+  },
+  {
+    "id": 2,
+    "title": "Intel TRX40 Compact Gaming PC",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 1212,
+    "realPrice": 1393,
+    "type": {
+      "socket": 1705,
+      "cpu": "Core i9",
+      "chipset": "B650",
+      "memory": "Up to 64GB",
+      "storage": "Up to 4 SSDs or HDDs",
+      "graphics": "Supports 2 GPUs"
+    },
+    "resolutions": ["4K", "HDR", "1440p"],
+    "caseSize": "Medium",
+    "caseType": "Default",
+    "chipBrand": "Intel"
+  },
+  {
+    "id": "be7bcee6-a176-412d-a81a-45f98ac663d3",
+    "title": "Windowed AMD Ryzen 7 Case #1",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 3483,
+    "realPrice": 4090,
+    "resolutions": ["4K"],
+    "caseSize": "Large",
+    "caseType": "Windowed",
+    "chipBrand": "Intel",
+    "type": {
+      "socket": 1200,
+      "cpu": "Core i9",
+      "chipset": "AMD B550",
+      "memory": "Up to 128GB",
+      "storage": "Up to 9 hard drives or SSD drives",
+      "graphics": "Supports up to 1 video card"
+    }
+  },
+  {
+    "id": "a24abd8d-d192-4e9d-b7a5-05608fa75b74",
+    "title": "Mini PC for Everyday Use #2",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 948,
+    "realPrice": 1139,
+    "resolutions": ["1080"],
+    "caseSize": "Small",
+    "caseType": "Windowed",
+    "chipBrand": "NVIDIA",
+    "type": {
+      "socket": 1200,
+      "cpu": "Core i5",
+      "chipset": "Intel Z590",
+      "memory": "Up to 64GB",
+      "storage": "Up to 5 drives",
+      "graphics": "Integrated + Dedicated"
+    }
+  },
+  {
+    "id": "696f32f7-3110-476c-8171-37149bb3c98f",
+    "title": "Radeon RX 7900 Workhorse #3",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 3931,
+    "realPrice": 4987,
+    "resolutions": ["1080"],
+    "caseSize": "Large",
+    "caseType": "Windowed",
+    "chipBrand": "NVIDIA",
+    "type": {
+      "socket": 1151,
+      "cpu": "Core i5",
+      "chipset": "AMD B550",
+      "memory": "Up to 256GB",
+      "storage": "Up to 5 drives",
+      "graphics": "Integrated + Dedicated"
+    }
+  },
+  {
+    "id": "d0aa13be-cfe5-4569-88c7-e901d51ead5c",
+    "title": "Radeon RX 7900 Workhorse #4",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 842,
+    "realPrice": 1012,
+    "resolutions": ["1080", "1440"],
+    "caseSize": "Small",
+    "caseType": "Windowed",
+    "chipBrand": "Radeon",
+    "type": {
+      "socket": "AM4",
+      "cpu": "Ryzen 9",
+      "chipset": "Intel Z590",
+      "memory": "Up to 256GB",
+      "storage": "Up to 9 hard drives or SSD drives",
+      "graphics": "Supports up to 1 video card"
+    }
+  },
+  {
+    "id": "f47c1d59-081a-4b3c-8ea5-06139db78cb2",
+    "title": "Intel Z790 Tower Gaming PC #5",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 1482,
+    "realPrice": 1910,
+    "resolutions": ["1080", "1440"],
+    "caseSize": "Large",
+    "caseType": "Windowed",
+    "chipBrand": "NVIDIA",
+    "type": {
+      "socket": "AM5",
+      "cpu": "Core i9",
+      "chipset": "Intel Z690",
+      "memory": "Up to 256GB",
+      "storage": "Up to 9 hard drives or SSD drives",
+      "graphics": "Integrated + Dedicated"
+    }
+  },
+  {
+    "id": "da03443b-2f56-4f11-a089-456eced1a1ad",
+    "title": "Radeon Gaming Ultra Tower #6",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 1592,
+    "realPrice": 2062,
+    "resolutions": ["1080", "1440"],
+    "caseSize": "Small",
+    "caseType": "Windowed",
+    "chipBrand": "Intel",
+    "type": {
+      "socket": "AM4",
+      "cpu": "Core i9",
+      "chipset": "AMD X570",
+      "memory": "Up to 256GB",
+      "storage": "Up to 2 SSDs",
+      "graphics": "Supports up to 1 video card"
+    }
+  },
+  {
+    "id": "789a4b12-4fa8-471d-9b87-a99aadb3c64b",
+    "title": "Compact Intel i5 Setup #7",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 2474,
+    "realPrice": 2952,
+    "resolutions": ["1080", "1440", "4K"],
+    "caseSize": "Large",
+    "caseType": "Windowed",
+    "chipBrand": "Radeon",
+    "type": {
+      "socket": "AM4",
+      "cpu": "Ryzen 5",
+      "chipset": "AMD X570",
+      "memory": "Up to 64GB",
+      "storage": "Up to 2 SSDs",
+      "graphics": "Dual GPU Ready"
+    }
+  },
+  {
+    "id": "c406868b-1efb-4819-b899-cca2b40a00df",
+    "title": "AMD Ryzen 9 Creator Station #8",
+    "image": "/assets/pc-pics/amd.png",
+    "price": 2300,
+    "realPrice": 2679,
+    "resolutions": ["1080"],
+    "caseSize": "Large",
+    "caseType": "Windowed",
+    "chipBrand": "AMD",
+    "type": {
+      "socket": 1700,
+      "cpu": "Ryzen 9",
+      "chipset": "AMD X570",
+      "memory": "Up to 256GB",
+      "storage": "Up to 5 drives",
+      "graphics": "Dual GPU Ready"
+    }
+  },
+  {
+    "id": "ee420428-919c-4cd6-996d-f54cbeb0374e",
+    "title": "Radeon RX 7900 Workhorse #9",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 3686,
+    "realPrice": 4644,
+    "resolutions": ["4K"],
+    "caseSize": "Medium",
+    "caseType": "Default",
+    "chipBrand": "NVIDIA",
+    "type": {
+      "socket": 1151,
+      "cpu": "Ryzen 9",
+      "chipset": "AMD B550",
+      "memory": "Up to 128GB",
+      "storage": "Up to 5 drives",
+      "graphics": "Integrated + Dedicated"
+    }
+  },
+  {
+    "id": "7490bb9d-d8f8-434e-aaed-9fea043e9f9e",
+    "title": "AMD Ryzen 9 Creator Station #10",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 2478,
+    "realPrice": 2856,
+    "resolutions": ["1080", "1440"],
+    "caseSize": "Small",
+    "caseType": "Windowed",
+    "chipBrand": "Radeon",
+    "type": {
+      "socket": 1151,
+      "cpu": "Ryzen 7",
+      "chipset": "AMD B550",
+      "memory": "Up to 256GB",
+      "storage": "Up to 5 drives",
+      "graphics": "Dual GPU Ready"
+    }
+  },
+  {
+    "id": "ca919155-5b8a-4eb0-b8e7-b0aa9fdc621a",
+    "title": "NVIDIA Studio Creator Box #11",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 2685,
+    "realPrice": 3080,
+    "resolutions": ["1080", "1440"],
+    "caseSize": "Small",
+    "caseType": "Windowed",
+    "chipBrand": "NVIDIA",
+    "type": {
+      "socket": "AM5",
+      "cpu": "Core i9",
+      "chipset": "AMD X570",
+      "memory": "Up to 64GB",
+      "storage": "Up to 5 drives",
+      "graphics": "Integrated + Dedicated"
+    }
+  },
+  {
+    "id": "5b73237e-f7a9-4a7c-bb84-0dfd00c51ff2",
+    "title": "Radeon RX 7900 Workhorse #12",
+    "image": "/assets/pc-pics/amd.png",
+    "price": 2615,
+    "realPrice": 3324,
+    "resolutions": ["4K"],
+    "caseSize": "Large",
+    "caseType": "Default",
+    "chipBrand": "AMD",
+    "type": {
+      "socket": "AM5",
+      "cpu": "Core i5",
+      "chipset": "AMD X570",
+      "memory": "Up to 64GB",
+      "storage": "Up to 9 hard drives or SSD drives",
+      "graphics": "Integrated + Dedicated"
+    }
+  },
+  {
+    "id": "2cd50a83-0b29-4673-8e5d-4f478aafc988",
+    "title": "NVIDIA RTX 4080 Beast Rig #13",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 3845,
+    "realPrice": 4401,
+    "resolutions": ["1080", "1440", "4K"],
+    "caseSize": "Medium",
+    "caseType": "Default",
+    "chipBrand": "Radeon",
+    "type": {
+      "socket": 1151,
+      "cpu": "Core i5",
+      "chipset": "Intel Z690",
+      "memory": "Up to 256GB",
+      "storage": "Up to 2 SSDs",
+      "graphics": "Dual GPU Ready"
+    }
+  },
+  {
+    "id": "12924ebe-1300-4c8f-be11-acdb70f7df18",
+    "title": "Windowed AMD Ryzen 7 Case #14",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 1048,
+    "realPrice": 1310,
+    "resolutions": ["4K"],
+    "caseSize": "Medium",
+    "caseType": "Windowed",
+    "chipBrand": "Intel",
+    "type": {
+      "socket": "AM4",
+      "cpu": "Ryzen 5",
+      "chipset": "AMD B550",
+      "memory": "Up to 64GB",
+      "storage": "Up to 2 SSDs",
+      "graphics": "Integrated + Dedicated"
+    }
+  },
+  {
+    "id": "eb5ff224-a1f9-456f-865e-a62882607095",
+    "title": "Intel Z690 Gaming Machine #15",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 2700,
+    "realPrice": 3437,
+    "resolutions": ["1080"],
+    "caseSize": "Small",
+    "caseType": "Windowed",
+    "chipBrand": "Intel",
+    "type": {
+      "socket": 1700,
+      "cpu": "Ryzen 7",
+      "chipset": "AMD B550",
+      "memory": "Up to 64GB",
+      "storage": "Up to 2 SSDs",
+      "graphics": "Integrated + Dedicated"
+    }
+  },
+  {
+    "id": "f432e33c-9451-4e66-8d77-279556eec3a0",
+    "title": "NVIDIA Studio Creator Box #16",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 2891,
+    "realPrice": 3354,
+    "resolutions": ["4K"],
+    "caseSize": "Small",
+    "caseType": "Windowed",
+    "chipBrand": "Radeon",
+    "type": {
+      "socket": 1700,
+      "cpu": "Core i9",
+      "chipset": "Intel Z690",
+      "memory": "Up to 128GB",
+      "storage": "Up to 9 hard drives or SSD drives",
+      "graphics": "Supports up to 1 video card"
+    }
+  },
+  {
+    "id": "6f3aa48d-b117-42c2-adcc-a9f78989ae34",
+    "title": "Radeon Gaming Ultra Tower #17",
+    "image": "/assets/pc-pics/amd.png",
+    "price": 818,
+    "realPrice": 998,
+    "resolutions": ["1080", "1440", "4K"],
+    "caseSize": "Medium",
+    "caseType": "Windowed",
+    "chipBrand": "AMD",
+    "type": {
+      "socket": 1151,
+      "cpu": "Core i5",
+      "chipset": "AMD X570",
+      "memory": "Up to 256GB",
+      "storage": "Up to 2 SSDs",
+      "graphics": "Supports up to 1 video card"
+    }
+  },
+  {
+    "id": "4f5ec222-965c-4dd3-a8fe-0f4a88859849",
+    "title": "Radeon RX 7900 Workhorse #18",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 889,
+    "realPrice": 1031,
+    "resolutions": ["1080", "1440"],
+    "caseSize": "Large",
+    "caseType": "Windowed",
+    "chipBrand": "Radeon",
+    "type": {
+      "socket": 1200,
+      "cpu": "Core i5",
+      "chipset": "AMD X570",
+      "memory": "Up to 64GB",
+      "storage": "Up to 9 hard drives or SSD drives",
+      "graphics": "Dual GPU Ready"
+    }
+  },
+  {
+    "id": "465b1f3f-5ef6-458e-9b7b-75ed19fb9ece",
+    "title": "Windowed AMD Ryzen 7 Case #19",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 935,
+    "realPrice": 1197,
+    "resolutions": ["1440"],
+    "caseSize": "Large",
+    "caseType": "Default",
+    "chipBrand": "Radeon",
+    "type": {
+      "socket": "AM5",
+      "cpu": "Ryzen 7",
+      "chipset": "Intel Z590",
+      "memory": "Up to 256GB",
+      "storage": "Up to 2 SSDs",
+      "graphics": "Supports up to 1 video card"
+    }
+  },
+  {
+    "id": "fb0b1342-8a05-499e-b438-84cccfae1569",
+    "title": "Windowed AMD Ryzen 7 Case #20",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 805,
+    "realPrice": 896,
+    "resolutions": ["4K"],
+    "caseSize": "Medium",
+    "caseType": "Default",
+    "chipBrand": "Radeon",
+    "type": {
+      "socket": 1151,
+      "cpu": "Ryzen 9",
+      "chipset": "AMD X570",
+      "memory": "Up to 128GB",
+      "storage": "Up to 5 drives",
+      "graphics": "Dual GPU Ready"
+    }
+  },
+  {
+    "id": "cb83bdd7-7991-42aa-8f58-1ee8d8a7d87b",
+    "title": "Intel Z790 Tower Gaming PC #21",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 2651,
+    "realPrice": 2948,
+    "resolutions": ["4K"],
+    "caseSize": "Large",
+    "caseType": "Windowed",
+    "chipBrand": "Radeon",
+    "type": {
+      "socket": 1200,
+      "cpu": "Core i9",
+      "chipset": "AMD X570",
+      "memory": "Up to 256GB",
+      "storage": "Up to 9 hard drives or SSD drives",
+      "graphics": "Dual GPU Ready"
+    }
+  },
+  {
+    "id": "1d879f29-5d78-4e0e-938d-eae6df64fc6c",
+    "title": "Windowed AMD Ryzen 7 Case #22",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 3811,
+    "realPrice": 4903,
+    "resolutions": ["1440"],
+    "caseSize": "Medium",
+    "caseType": "Windowed",
+    "chipBrand": "Intel",
+    "type": {
+      "socket": 1200,
+      "cpu": "Core i5",
+      "chipset": "Intel Z590",
+      "memory": "Up to 64GB",
+      "storage": "Up to 5 drives",
+      "graphics": "Integrated + Dedicated"
+    }
+  },
+  {
+    "id": "15b46b5b-5fee-44ac-a2e3-7b96d054a8f6",
+    "title": "NVIDIA Studio Creator Box #23",
+    "image": "/assets/pc-pics/amd.png",
+    "price": 790,
+    "realPrice": 901,
+    "resolutions": ["1080", "1440", "4K"],
+    "caseSize": "Large",
+    "caseType": "Windowed",
+    "chipBrand": "AMD",
+    "type": {
+      "socket": "AM4",
+      "cpu": "Core i7",
+      "chipset": "Intel Z590",
+      "memory": "Up to 256GB",
+      "storage": "Up to 5 drives",
+      "graphics": "Supports up to 1 video card"
+    }
+  },
+  {
+    "id": "991982d6-4179-408b-bdbc-cdb212dc26d7",
+    "title": "Compact Intel i5 Setup #24",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 3526,
+    "realPrice": 3957,
+    "resolutions": ["4K"],
+    "caseSize": "Medium",
+    "caseType": "Default",
+    "chipBrand": "NVIDIA",
+    "type": {
+      "socket": "AM5",
+      "cpu": "Ryzen 7",
+      "chipset": "Intel Z690",
+      "memory": "Up to 256GB",
+      "storage": "Up to 9 hard drives or SSD drives",
+      "graphics": "Dual GPU Ready"
+    }
+  },
+  {
+    "id": "82ad604a-df12-44ff-bf27-607f3db8e375",
+    "title": "Radeon RX 7900 Workhorse #25",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 831,
+    "realPrice": 997,
+    "resolutions": ["1440"],
+    "caseSize": "Medium",
+    "caseType": "Default",
+    "chipBrand": "Intel",
+    "type": {
+      "socket": 1700,
+      "cpu": "Core i7",
+      "chipset": "Intel Z690",
+      "memory": "Up to 256GB",
+      "storage": "Up to 2 SSDs",
+      "graphics": "Dual GPU Ready"
+    }
+  },
+  {
+    "id": "8dd0142a-a410-40c3-87d0-32e68b504abf",
+    "title": "Intel Z790 Tower Gaming PC #26",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 3919,
+    "realPrice": 4381,
+    "resolutions": ["4K"],
+    "caseSize": "Medium",
+    "caseType": "Default",
+    "chipBrand": "NVIDIA",
+    "type": {
+      "socket": 1200,
+      "cpu": "Core i7",
+      "chipset": "Intel Z690",
+      "memory": "Up to 128GB",
+      "storage": "Up to 9 hard drives or SSD drives",
+      "graphics": "Dual GPU Ready"
+    }
+  },
+  {
+    "id": "0cd51848-8db4-4b70-8486-4602c3416559",
+    "title": "Radeon Gaming Ultra Tower #27",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 3494,
+    "realPrice": 3961,
+    "resolutions": ["1080"],
+    "caseSize": "Medium",
+    "caseType": "Windowed",
+    "chipBrand": "Radeon",
+    "type": {
+      "socket": "AM5",
+      "cpu": "Core i5",
+      "chipset": "Intel Z690",
+      "memory": "Up to 64GB",
+      "storage": "Up to 5 drives",
+      "graphics": "Supports up to 1 video card"
+    }
+  },
+  {
+    "id": "df3335d9-ddca-4d66-bc81-cd092c8ed524",
+    "title": "NVIDIA RTX 4080 Beast Rig #28",
+    "image": "/assets/pc-pics/amd.png",
+    "price": 960,
+    "realPrice": 1185,
+    "resolutions": ["1080", "1440", "4K"],
+    "caseSize": "Large",
+    "caseType": "Windowed",
+    "chipBrand": "AMD",
+    "type": {
+      "socket": 1200,
+      "cpu": "Core i9",
+      "chipset": "AMD B550",
+      "memory": "Up to 256GB",
+      "storage": "Up to 9 hard drives or SSD drives",
+      "graphics": "Integrated + Dedicated"
+    }
+  },
+  {
+    "id": "7331d1f0-0690-41f6-a632-960b078bc85e",
+    "title": "Intel Z790 Tower Gaming PC #29",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 1174,
+    "realPrice": 1370,
+    "resolutions": ["1080", "1440", "4K"],
+    "caseSize": "Medium",
+    "caseType": "Default",
+    "chipBrand": "Intel",
+    "type": {
+      "socket": 1700,
+      "cpu": "Ryzen 9",
+      "chipset": "Intel Z690",
+      "memory": "Up to 128GB",
+      "storage": "Up to 2 SSDs",
+      "graphics": "Integrated + Dedicated"
+    }
+  },
+  {
+    "id": "4ecb269d-1d01-4b26-832b-2e2a326bbbcf",
+    "title": "Mini PC for Everyday Use #30",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 1012,
+    "realPrice": 1116,
+    "resolutions": ["1080"],
+    "caseSize": "Small",
+    "caseType": "Default",
+    "chipBrand": "Radeon",
+    "type": {
+      "socket": "AM4",
+      "cpu": "Ryzen 5",
+      "chipset": "Intel Z590",
+      "memory": "Up to 128GB",
+      "storage": "Up to 2 SSDs",
+      "graphics": "Dual GPU Ready"
+    }
+  },
+  {
+    "id": "b295aed5-4e81-455c-b21d-cfdb230db776",
+    "title": "Radeon Gaming Ultra Tower #31",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 1638,
+    "realPrice": 2090,
+    "resolutions": ["4K"],
+    "caseSize": "Large",
+    "caseType": "Windowed",
+    "chipBrand": "Radeon",
+    "type": {
+      "socket": 1200,
+      "cpu": "Ryzen 5",
+      "chipset": "Intel Z590",
+      "memory": "Up to 256GB",
+      "storage": "Up to 9 hard drives or SSD drives",
+      "graphics": "Dual GPU Ready"
+    }
+  },
+  {
+    "id": "5a531636-a313-4155-baba-7c2b7d3137d8",
+    "title": "AMD Ryzen 9 Creator Station #32",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 3505,
+    "realPrice": 3888,
+    "resolutions": ["1440"],
+    "caseSize": "Large",
+    "caseType": "Windowed",
+    "chipBrand": "Radeon",
+    "type": {
+      "socket": 1200,
+      "cpu": "Ryzen 9",
+      "chipset": "AMD B550",
+      "memory": "Up to 128GB",
+      "storage": "Up to 9 hard drives or SSD drives",
+      "graphics": "Supports up to 1 video card"
+    }
+  },
+  {
+    "id": "67f7329f-d6f3-4745-a1b4-4c4f29a0cb49",
+    "title": "Intel Z790 Tower Gaming PC #33",
+    "image": "/assets/pc-pics/amd.png",
+    "price": 3448,
+    "realPrice": 3806,
+    "resolutions": ["1080", "1440", "4K"],
+    "caseSize": "Medium",
+    "caseType": "Default",
+    "chipBrand": "AMD",
+    "type": {
+      "socket": "AM5",
+      "cpu": "Ryzen 9",
+      "chipset": "Intel Z590",
+      "memory": "Up to 256GB",
+      "storage": "Up to 5 drives",
+      "graphics": "Integrated + Dedicated"
+    }
+  },
+  {
+    "id": "6a4368bd-1dd7-447a-b213-18f78c709dcb",
+    "title": "NVIDIA Studio Creator Box #34",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 3883,
+    "realPrice": 5021,
+    "resolutions": ["1080", "1440"],
+    "caseSize": "Small",
+    "caseType": "Windowed",
+    "chipBrand": "Radeon",
+    "type": {
+      "socket": 1151,
+      "cpu": "Ryzen 9",
+      "chipset": "AMD X570",
+      "memory": "Up to 128GB",
+      "storage": "Up to 2 SSDs",
+      "graphics": "Dual GPU Ready"
+    }
+  },
+  {
+    "id": "c43a3aa0-928d-45d6-9922-f5d47df59e26",
+    "title": "Intel Z690 Gaming Machine #35",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 2604,
+    "realPrice": 2925,
+    "resolutions": ["4K"],
+    "caseSize": "Medium",
+    "caseType": "Windowed",
+    "chipBrand": "NVIDIA",
+    "type": {
+      "socket": 1200,
+      "cpu": "Ryzen 9",
+      "chipset": "Intel Z690",
+      "memory": "Up to 128GB",
+      "storage": "Up to 9 hard drives or SSD drives",
+      "graphics": "Supports up to 1 video card"
+    }
+  },
+  {
+    "id": "77abf930-9be4-40ee-ba9a-a9bb2b5cb9da",
+    "title": "Intel Z790 Tower Gaming PC #36",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 1491,
+    "realPrice": 1921,
+    "resolutions": ["1080", "1440", "4K"],
+    "caseSize": "Small",
+    "caseType": "Default",
+    "chipBrand": "NVIDIA",
+    "type": {
+      "socket": 1700,
+      "cpu": "Core i9",
+      "chipset": "AMD X570",
+      "memory": "Up to 64GB",
+      "storage": "Up to 2 SSDs",
+      "graphics": "Integrated + Dedicated"
+    }
+  },
+  {
+    "id": "bc418e3d-6788-4132-9a4f-560c245cbe6c",
+    "title": "Radeon RX 7900 Workhorse #37",
+    "image": "/assets/pc-pics/amd.png",
+    "price": 2529,
+    "realPrice": 3259,
+    "resolutions": ["1080", "1440"],
+    "caseSize": "Small",
+    "caseType": "Default",
+    "chipBrand": "AMD",
+    "type": {
+      "socket": 1700,
+      "cpu": "Ryzen 9",
+      "chipset": "Intel Z690",
+      "memory": "Up to 256GB",
+      "storage": "Up to 9 hard drives or SSD drives",
+      "graphics": "Integrated + Dedicated"
+    }
+  },
+  {
+    "id": "c2ca167f-2a27-4b6f-bf7f-5301120121a7",
+    "title": "NVIDIA Studio Creator Box #38",
+    "image": "/assets/pc-pics/amd.png",
+    "price": 3162,
+    "realPrice": 3826,
+    "resolutions": ["4K"],
+    "caseSize": "Medium",
+    "caseType": "Default",
+    "chipBrand": "AMD",
+    "type": {
+      "socket": 1700,
+      "cpu": "Ryzen 7",
+      "chipset": "AMD X570",
+      "memory": "Up to 256GB",
+      "storage": "Up to 9 hard drives or SSD drives",
+      "graphics": "Integrated + Dedicated"
+    }
+  },
+  {
+    "id": "25e683cb-1fd6-403f-9c6a-e80d07f60c73",
+    "title": "Intel Z690 Gaming Machine #39",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 1544,
+    "realPrice": 1970,
+    "resolutions": ["1080"],
+    "caseSize": "Large",
+    "caseType": "Windowed",
+    "chipBrand": "Radeon",
+    "type": {
+      "socket": 1151,
+      "cpu": "Ryzen 5",
+      "chipset": "Intel Z590",
+      "memory": "Up to 256GB",
+      "storage": "Up to 5 drives",
+      "graphics": "Dual GPU Ready"
+    }
+  },
+  {
+    "id": "baff2429-cedc-4f82-a146-558186574d46",
+    "title": "Mini PC for Everyday Use #40",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 3533,
+    "realPrice": 4158,
+    "resolutions": ["4K"],
+    "caseSize": "Large",
+    "caseType": "Default",
+    "chipBrand": "Radeon",
+    "type": {
+      "socket": "AM4",
+      "cpu": "Core i5",
+      "chipset": "Intel Z590",
+      "memory": "Up to 256GB",
+      "storage": "Up to 5 drives",
+      "graphics": "Integrated + Dedicated"
+    }
+  },
+  {
+    "id": "d9f28fa0-195f-46b6-8dd7-f83f11214ff5",
+    "title": "NVIDIA RTX 4080 Beast Rig #41",
+    "image": "/assets/pc-pics/amd.png",
+    "price": 2333,
+    "realPrice": 2712,
+    "resolutions": ["4K"],
+    "caseSize": "Large",
+    "caseType": "Default",
+    "chipBrand": "AMD",
+    "type": {
+      "socket": "AM5",
+      "cpu": "Core i9",
+      "chipset": "Intel Z690",
+      "memory": "Up to 128GB",
+      "storage": "Up to 9 hard drives or SSD drives",
+      "graphics": "Supports up to 1 video card"
+    }
+  },
+  {
+    "id": "adcd02e5-1d79-4993-8920-6f70f546c0bc",
+    "title": "NVIDIA Studio Creator Box #42",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 2069,
+    "realPrice": 2605,
+    "resolutions": ["4K"],
+    "caseSize": "Large",
+    "caseType": "Windowed",
+    "chipBrand": "NVIDIA",
+    "type": {
+      "socket": "AM5",
+      "cpu": "Core i9",
+      "chipset": "AMD X570",
+      "memory": "Up to 256GB",
+      "storage": "Up to 2 SSDs",
+      "graphics": "Supports up to 1 video card"
+    }
+  },
+  {
+    "id": "2111d7dc-f4cf-430a-b621-dab72289ddab",
+    "title": "Radeon Gaming Ultra Tower #43",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 2380,
+    "realPrice": 2927,
+    "resolutions": ["1080"],
+    "caseSize": "Large",
+    "caseType": "Default",
+    "chipBrand": "Radeon",
+    "type": {
+      "socket": "AM5",
+      "cpu": "Ryzen 7",
+      "chipset": "AMD X570",
+      "memory": "Up to 64GB",
+      "storage": "Up to 2 SSDs",
+      "graphics": "Supports up to 1 video card"
+    }
+  },
+  {
+    "id": "b74463fc-5a0a-4c02-983b-e93f54f82fb4",
+    "title": "Intel Z690 Gaming Machine #44",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 3533,
+    "realPrice": 3898,
+    "resolutions": ["1080", "1440", "4K"],
+    "caseSize": "Medium",
+    "caseType": "Default",
+    "chipBrand": "Radeon",
+    "type": {
+      "socket": 1200,
+      "cpu": "Core i9",
+      "chipset": "Intel Z590",
+      "memory": "Up to 256GB",
+      "storage": "Up to 5 drives",
+      "graphics": "Integrated + Dedicated"
+    }
+  },
+  {
+    "id": "6c0f5e8b-427e-4760-9800-da0989d3fa1c",
+    "title": "Mini PC for Everyday Use #45",
+    "image": "/assets/pc-pics/amd.png",
+    "price": 1304,
+    "realPrice": 1537,
+    "resolutions": ["1080"],
+    "caseSize": "Large",
+    "caseType": "Windowed",
+    "chipBrand": "AMD",
+    "type": {
+      "socket": "AM4",
+      "cpu": "Core i9",
+      "chipset": "AMD X570",
+      "memory": "Up to 64GB",
+      "storage": "Up to 2 SSDs",
+      "graphics": "Integrated + Dedicated"
+    }
+  },
+  {
+    "id": "8c86af5a-88b8-4766-9789-30f844d6a6e4",
+    "title": "Mini PC for Everyday Use #46",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 2676,
+    "realPrice": 3029,
+    "resolutions": ["1440"],
+    "caseSize": "Large",
+    "caseType": "Default",
+    "chipBrand": "Intel",
+    "type": {
+      "socket": "AM4",
+      "cpu": "Ryzen 5",
+      "chipset": "Intel Z590",
+      "memory": "Up to 128GB",
+      "storage": "Up to 9 hard drives or SSD drives",
+      "graphics": "Integrated + Dedicated"
+    }
+  },
+  {
+    "id": "df46df29-b417-451a-baec-1d7eac869e9b",
+    "title": "Windowed AMD Ryzen 7 Case #47",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 929,
+    "realPrice": 1038,
+    "resolutions": ["1080", "1440", "4K"],
+    "caseSize": "Small",
+    "caseType": "Windowed",
+    "chipBrand": "Intel",
+    "type": {
+      "socket": 1700,
+      "cpu": "Core i7",
+      "chipset": "Intel Z690",
+      "memory": "Up to 64GB",
+      "storage": "Up to 9 hard drives or SSD drives",
+      "graphics": "Dual GPU Ready"
+    }
+  },
+  {
+    "id": "63783980-dad2-4500-aed8-8f4c490a5112",
+    "title": "Compact Intel i5 Setup #48",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 1113,
+    "realPrice": 1268,
+    "resolutions": ["1440"],
+    "caseSize": "Large",
+    "caseType": "Windowed",
+    "chipBrand": "NVIDIA",
+    "type": {
+      "socket": 1151,
+      "cpu": "Core i7",
+      "chipset": "AMD B550",
+      "memory": "Up to 64GB",
+      "storage": "Up to 2 SSDs",
+      "graphics": "Supports up to 1 video card"
+    }
+  },
+  {
+    "id": "f17e5967-08cd-4fe6-a523-c1a4a1f7bf16",
+    "title": "Radeon RX 7900 Workhorse #49",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 3518,
+    "realPrice": 4541,
+    "resolutions": ["1080"],
+    "caseSize": "Large",
+    "caseType": "Default",
+    "chipBrand": "NVIDIA",
+    "type": {
+      "socket": 1700,
+      "cpu": "Core i7",
+      "chipset": "AMD B550",
+      "memory": "Up to 128GB",
+      "storage": "Up to 9 hard drives or SSD drives",
+      "graphics": "Integrated + Dedicated"
+    }
+  },
+  {
+    "id": "5aa80829-1c0b-4b4e-a279-078758195c73",
+    "title": "AMD Ryzen 9 Creator Station #50",
+    "image": "/assets/pc-pics/intel.png",
+    "price": 1209,
+    "realPrice": 1487,
+    "resolutions": ["1080"],
+    "caseSize": "Small",
+    "caseType": "Windowed",
+    "chipBrand": "Intel",
+    "type": {
+      "socket": "AM4",
+      "cpu": "Ryzen 5",
+      "chipset": "Intel Z590",
+      "memory": "Up to 128GB",
+      "storage": "Up to 2 SSDs",
+      "graphics": "Integrated + Dedicated"
+    }
+  }
+]

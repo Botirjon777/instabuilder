@@ -1,0 +1,60 @@
+export const footerData = [
+  {
+    title: "Products and Services",
+    links: [
+      "Special Offers!",
+      "Desktops",
+      "Workstations",
+      "Laptops",
+      "Mini PCs",
+      "Servers",
+      "Components",
+      "Solutions",
+      "Instabuilder",
+      "Builder",
+    ],
+  },
+  {
+    title: "My Account",
+    links: ["Dashboard", "Account Settings", "Order Status", "RMA Requests"],
+  },
+  {
+    title: "Avadirect",
+    links: [
+      "About AVADirect",
+      "How We Work",
+      "Contact",
+      "Careers",
+      "Financing",
+      "PC Showroom",
+      "Blog",
+      "Social Media",
+    ],
+  },
+  {
+    title: "Support",
+    links: [
+      "FAQ",
+      "Sales Assistance",
+      "Customer Service",
+      "Technical Support",
+      "Refunds & Exchanges",
+      "Wallpapers",
+      "Make a Suggestion",
+    ],
+  },
+  {
+    title: "Industry Solutions",
+    links: [
+      "Construction",
+      "Creative",
+      "Defense",
+      "Educational",
+      "Energy",
+      "Engineering",
+      "Forensics",
+      "Manufacturing",
+      "Medical",
+    ],
+  },
+];
