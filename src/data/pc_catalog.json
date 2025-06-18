@@ -3,8 +3,8 @@
     "id": 1,
     "title": "AMD Z790 Ultra Tower Workstation",
     "image": "/assets/pc-pics/AMD.png",
-    "price": 3300,
-    "realPrice": 3794,
+    "price": 3300.0,
+    "realPrice": 3794.0,
     "type": {
       "socket": 1379,
       "cpu": "Ryzen 5",
@@ -22,8 +22,8 @@
     "id": 2,
     "title": "Intel TRX40 Compact Gaming PC",
     "image": "/assets/pc-pics/intel.png",
-    "price": 1212,
-    "realPrice": 1393,
+    "price": 1212.0,
+    "realPrice": 1393.0,
     "type": {
       "socket": 1705,
       "cpu": "Core i9",
@@ -136,8 +136,8 @@
     "id": "a24abd8d-d192-4e9d-b7a5-05608fa75b74",
     "title": "Mini PC for Everyday Use #2",
     "image": "/assets/pc-pics/intel.png",
-    "price": 948,
-    "realPrice": 1139,
+    "price": 948.0,
+    "realPrice": 1139.0,
     "resolutions": ["1080"],
     "caseSize": "Small",
     "caseType": "Windowed",
@@ -190,7 +190,7 @@
     }
   },
   {
-    "id": "f47c1d59-081a-4b3c-8ea5-06139db78cb2",
+    "id": "f47c1d59-081a-4b3c-8ea5-06139db78cb3",
     "title": "Intel Z790 Tower Gaming PC #5",
     "image": "/assets/pc-pics/intel.png",
     "price": 1482,
@@ -337,7 +337,7 @@
       "cpu": "Core i9",
       "chipset": "AMD X570",
       "memory": "Up to 64GB",
-      "storage": "Up to 5 drives",
+      "storage": "Up to 5 drives Up to 5 drives",
       "graphics": "Integrated + Dedicated"
     }
   },

@@ -21,7 +21,7 @@ import GameCard from "@/components/GameCard";
 import PriceRangeSlider from "@/components/PriceRangeSlider";
 
 export default function GamingPage() {
-  const sectionsRef = [useRef(), useRef(), useRef(), useRef(), useRef()];
+  const sectionsRef = [useRef(), useRef(), useRef(), useRef()];
   const [currentSection, setCurrentSection] = useState(0);
 
   const pathname = usePathname();
@@ -101,13 +101,6 @@ export default function GamingPage() {
             Previous
           </button>
         )}
-        {index == 0 && (
-          <Link href="/">
-            <button className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
-              Go Back
-            </button>
-          </Link>
-        )}
         {index < sectionsRef.length - 1 && (
           <button
             onClick={() => {
@@ -116,12 +109,12 @@ export default function GamingPage() {
                 setCurrentStep(currentStep + 1);
               }
             }}
-            className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+            className="px-6 py-2 bg-[#2198F3] text-white rounded-lg hover:bg-blue-600 transition-colors"
           >
             Next Step
           </button>
         )}
-        {index === 4 && (
+        {index === 3 && (
           <Link
             href={{
               pathname: "/results",
@@ -137,8 +130,8 @@ export default function GamingPage() {
               },
             }}
           >
-            <button className="bg-green-500 text-white py-2 px-4 rounded">
-              View Results
+            <button className="bg-[#2198F3] text-white py-2 px-4 rounded-lg">
+              Show Results
             </button>
           </Link>
         )}
@@ -167,8 +160,8 @@ export default function GamingPage() {
 
         <div className="flex justify-center gap-4 mt-4">
           <Link href="/">
-            <button className="bg-blue-500 text-white py-2 px-4 rounded">
-              Go Back
+            <button className="px-6 py-2 text-blue-500 border border-blue-500 rounded-lg hover:bg-blue-50 transition-colors">
+              Previous
             </button>
           </Link>
 
@@ -177,7 +170,7 @@ export default function GamingPage() {
               scrollToSection(1);
               setCurrentStep(2);
             }}
-            className="bg-blue-500 text-white py-2 px-4 rounded"
+            className="bg-blue-500 text-white py-2 px-4 rounded-lg"
           >
             Next Step
           </button>
@@ -224,19 +217,23 @@ export default function GamingPage() {
 
       <Section title="Choose your case size" index={2}>
         <div className="grid grid-cols-2 md:flex md:flex-wrap justify-center gap-4">
-          {caseSizes.map((item) => (
-            <SmallCard
+          {caseSizes.map((item, index) => (
+            <div
               key={item.id}
-              item={item}
-              selected={selectedCaseSize}
-              onClick={setSelectedCaseSize}
-            />
+              className={`
+        ${index === 2 ? "col-span-2 flex justify-center" : ""}
+        md:col-span-1
+      `}
+            >
+              <SmallCard
+                item={item}
+                selected={selectedCaseSize}
+                onClick={setSelectedCaseSize}
+              />
+            </div>
           ))}
         </div>
-      </Section>
-
-      <Section title="Choose your case type" index={3}>
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-4 pt-4">
           {caseTypes.map((item) => (
             <SmallCard
               key={item.id}
@@ -249,18 +246,24 @@ export default function GamingPage() {
         </div>
       </Section>
 
-      <Section title="Choose your chip brand" index={4}>
+      <Section title="Choose your chip brand" index={3}>
         <div className="grid grid-cols-2 md:flex md:flex-wrap justify-center gap-4">
-          {chipBrands.map((item) => (
-            <SmallCard
+          {chipBrands.map((item, index) => (
+            <div
               key={item.id}
-              item={item}
-              selected={selectedChipBrand}
-              onClick={setSelectedChipBrand}
-              size={120}
-              isChip
-              multiple={true}
-            />
+              className={`${
+                index === 4 ? "col-span-2 flex justify-center" : ""
+              } md:col-span-1`}
+            >
+              <SmallCard
+                item={item}
+                selected={selectedChipBrand}
+                onClick={setSelectedChipBrand}
+                size={120}
+                isChip
+                multiple={true}
+              />
+            </div>
           ))}
         </div>
       </Section>

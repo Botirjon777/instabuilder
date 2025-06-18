@@ -2,12 +2,11 @@
 import clsx from "clsx";
 import SelectedCard from "./SelectedCard";
 import InfoTooltip from "./InfoToolTip";
-import { resolutions, filters } from "@/data/data";
+import { resolutions, filtersWithApps } from "@/data/data";
 import { IoMdClose } from "react-icons/io";
 
 import {
   games,
-  apps,
   case_sizes,
   caseSizes,
   caseTypes,
@@ -77,12 +76,9 @@ export default function Modal({
       break;
 
     case "Tasks":
-      if (pageType === "workstation") {
-        title = "Which Industry Best Describes Your Field of Work?";
-      } else {
-        title = "Choose case type";
-      }
-      data = apps;
+      title = "Which Industry Best Describes Your Field of Work?";
+      data =
+        filtersWithApps.find((f) => f.label === selectedFilter)?.apps || [];
       multiple = true;
       state = selectedApps;
       setter = setSelectedApps;
@@ -115,8 +111,7 @@ export default function Modal({
     <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4">
       <div
         className={clsx(
-          "relative bg-white rounded-lg shadow-xl w-full max-w-7xl max-h-[90vh] overflow-hidden",
-          isWorkstationTasks ? "p-6" : "p-6"
+          "relative bg-white rounded-lg shadow-xl w-full max-w-7xl max-h-[90vh] overflow-hidden p-6"
         )}
       >
         <div className="flex items-center justify-center mb-6">
@@ -156,7 +151,7 @@ export default function Modal({
             <div className="mb-8">
               <div className="hidden md:flex justify-center">
                 <div className="inline-flex bg-gray-100 rounded-lg p-1">
-                  {filters.map((f, index) => (
+                  {filtersWithApps.map((f) => (
                     <button
                       key={f.id}
                       onClick={() => setSelectedFilter(f.label)}
@@ -173,26 +168,24 @@ export default function Modal({
                 </div>
               </div>
 
-              <div className="w-full mb-6">
-                <div className="md:hidden flex flex-col gap-2 w-full">
-                  {filters.map((f) => (
-                    <button
-                      key={f.id}
-                      onClick={() => setSelectedFilter(f.label)}
-                      className={clsx(
-                        "w-full px-4 py-3 text-sm font-medium transition-all duration-200 rounded-lg break-words whitespace-normal text-left",
-                        selectedFilter === f.label
-                          ? "bg-blue-500 text-white shadow-sm"
-                          : "bg-white text-gray-700 border border-gray-200 hover:text-blue-600 hover:bg-gray-50"
-                      )}
-                    >
-                      {f.label}
-                    </button>
-                  ))}
-                </div>
+              <div className="md:hidden grid grid-cols-2 gap-2 bg-white rounded-lg border border-gray-200 p-2">
+                {filtersWithApps.map((f) => (
+                  <button
+                    key={f.id}
+                    onClick={() => setSelectedFilter(f.label)}
+                    className={clsx(
+                      "w-full px-3 py-2 text-xs font-medium text-left rounded-md break-words whitespace-normal",
+                      selectedFilter === f.label
+                        ? "bg-blue-500 text-white shadow-sm"
+                        : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                    )}
+                  >
+                    {f.label}
+                  </button>
+                ))}
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
                 {data.map((item) => (
                   <SelectedCard
                     key={item.id}
@@ -210,42 +203,35 @@ export default function Modal({
 
           {modalType === "Type" && pageType === "gaming" ? (
             <div className="flex flex-col gap-6">
-              <div>
-                <h4 className="text-lg font-semibold text-center mb-8">
-                  Case Sizes
-                </h4>
-                <div className="flex flex-wrap justify-center gap-4">
-                  {data
-                    .filter((item) => item.group === "Size")
-                    .map((item) => (
-                      <SelectedCard
-                        key={`size-${item.id}`}
-                        item={item}
-                        selected={selectedCaseSize}
-                        setSelected={setSelectedCaseSize}
-                        multiple={false}
-                        size={50}
-                      />
-                    ))}
-                </div>
+              <h4 className="text-lg font-semibold text-center mb-8">
+                Case Sizes
+              </h4>
+              <div className="flex flex-wrap justify-center gap-4">
+                {data
+                  .filter((item) => item.group === "Size")
+                  .map((item) => (
+                    <SelectedCard
+                      key={`size-${item.id}`}
+                      item={item}
+                      selected={selectedCaseSize}
+                      setSelected={setSelectedCaseSize}
+                      multiple={false}
+                      size={50}
+                    />
+                  ))}
               </div>
-              <div>
-                <h4 className="text-lg font-semibold text-center mb-2">
-                  Case Types
-                </h4>
-                <div className="flex flex-wrap justify-center gap-4">
-                  {data
-                    .filter((item) => item.group === "Type")
-                    .map((item) => (
-                      <SelectedCard
-                        key={`type-${item.id}`}
-                        item={item}
-                        selected={selectedCaseType}
-                        setSelected={setSelectedCaseType}
-                        multiple={false}
-                      />
-                    ))}
-                </div>
+              <div className="flex flex-wrap justify-center gap-4">
+                {data
+                  .filter((item) => item.group === "Type")
+                  .map((item) => (
+                    <SelectedCard
+                      key={`type-${item.id}`}
+                      item={item}
+                      selected={selectedCaseType}
+                      setSelected={setSelectedCaseType}
+                      multiple={false}
+                    />
+                  ))}
               </div>
             </div>
           ) : (

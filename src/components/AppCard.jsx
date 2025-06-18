@@ -17,7 +17,7 @@ export default function AppCard({
     <div
       className={clsx(
         "relative rounded-lg bg-white border transition-all duration-200 cursor-pointer hover:shadow-sm",
-        "w-full aspect-[5/1] md:aspect-[2/1] flex flex-col items-center justify-center gap-2 p-3 md:p-4",
+        "w-full aspect-auto flex flex-row md:flex-col items-center justify-start md:justify-center gap-3 md:gap-2 px-3 py-2 md:p-4",
         isSelected
           ? "border-blue-500 shadow-md"
           : "border-gray-300 hover:border-gray-400"
@@ -32,9 +32,8 @@ export default function AppCard({
           : onClick(item.id)
       }
     >
-      {/* Selection indicator */}
       {isSelected && (
-        <div className="absolute top-2 right-2 md:top-3 md:right-3 w-4 h-4 bg-blue-500 rounded-full flex items-center justify-center">
+        <div className="absolute top-1.5 right-1.5 md:top-2 md:right-2 w-4 h-4 bg-blue-500 rounded-full flex items-center justify-center">
           <svg
             className="w-2.5 h-2.5 text-white"
             fill="currentColor"
@@ -49,18 +48,18 @@ export default function AppCard({
         </div>
       )}
 
-      <div className="flex-1 flex items-center justify-center">
+      <div className="flex-shrink-0">
         <Image
           src={item.image || "/placeholder.svg"}
           alt={item.type || item.title}
           width={size}
           height={size}
-          className="object-contain w-8 h-8 md:w-8 md:h-8"
+          className="object-contain w-8 h-8"
         />
       </div>
 
-      <div className="text-center">
-        <span className="text-xs md:text-sm font-normal text-gray-800 leading-tight">
+      <div className="text-left md:text-center">
+        <span className="text-sm font-medium text-gray-800 leading-tight">
           {item.type || item.title}
         </span>
       </div>

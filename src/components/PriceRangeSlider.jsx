@@ -26,7 +26,7 @@ function PriceRangeSlider({
   };
 
   const leftOffsetPx = 0;
-  const rightOffsetPx = -40;
+  const rightOffsetPx = -50;
 
   const visualRange = max - min - 450;
 
@@ -49,7 +49,7 @@ function PriceRangeSlider({
     >
       {isSummary ? (
         <>
-          <div className="hidden md:block flex-col items-start w-[170px] h-20">
+          <div className="hidden md:block flex-col items-start w-[170px] h-24">
             <span className="text-gray-400 text-[18px]">Budget:</span>
             <div className="font-bold text-[20px]">{`$${minValue} - $${maxValue}`}</div>
             <span className="text-gray-500 font-normal text-[13px]">
@@ -91,70 +91,203 @@ function PriceRangeSlider({
           </div>
         </div>
       )}
+      {isSummary && (
+        <div className="hidden md:block relative w-full">
+          <input
+            type="range"
+            min={min}
+            max={max - 1000}
+            step={50}
+            value={baseValue}
+            onChange={handleChange}
+            className="absolute w-full appearance-none z-30 h-2 bg-transparent"
+          />
 
-      <div className="relative w-full">
-        <input
-          type="range"
-          min={min}
-          max={max - 1000}
-          step={1}
-          value={baseValue}
-          onChange={handleChange}
-          className="absolute w-full appearance-none z-30 h-2 bg-transparent"
-        />
+          <style jsx>{`
+            input[type="range"] {
+              -webkit-appearance: none;
+              appearance: none;
+            }
 
-        <style jsx>{`
-          input[type="range"] {
-            -webkit-appearance: none;
-            appearance: none;
-          }
+            input[type="range"]::-webkit-slider-thumb {
+              -webkit-appearance: none;
+              appearance: none;
+              background-color: transparent;
+              height: 28px;
+              width: 70px;
+              border-radius: 9999px;
+              cursor: pointer;
+            }
 
-          input[type="range"]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            background-color: transparent;
-            height: 28px;
-            width: 70px;
-            border-radius: 9999px;
-            cursor: pointer;
-          }
+            input[type="range"]::-moz-range-thumb {
+              background: transparent;
+              border: none;
+              height: 0;
+              width: 0;
+            }
 
-          input[type="range"]::-moz-range-thumb {
-            background: transparent;
-            border: none;
-            height: 0;
-            width: 0;
-          }
+            input[type="range"]::-webkit-slider-runnable-track {
+              background: transparent;
+            }
+          `}</style>
 
-          input[type="range"]::-webkit-slider-runnable-track {
-            background: transparent;
-          }
-        `}</style>
-
-        <div
-          className={clsx(
-            "absolute top-1/2 left-0 w-full h-2 rounded",
-            isSummary ? "bg-gray-300" : "bg-gray-200",
-            "-translate-y-1/2"
-          )}
-        />
-        <div className="relative w-full h-0">
           <div
-            className="absolute z-40 flex justify-center items-center bg-orange-500 rounded-full text-white font-bold text-sm md:h-6 h-7.5 w-[70px] md:w-[103px] pointer-events-none pb-0.5"
-            style={{
-              top: "-12px",
-              left: thumbLeft,
-              letterSpacing: "0.25em",
-            }}
-          >
-            ||||
+            className={clsx(
+              "absolute top-1/2 left-0 w-full h-2 rounded",
+              isSummary ? "bg-gray-300" : "bg-gray-200",
+              "-translate-y-1/2"
+            )}
+          />
+          <div className="relative w-full h-0">
+            <div
+              className="absolute z-40 flex justify-center items-center bg-orange-500 rounded-full text-white font-bold text-sm md:h-6 h-7.5 w-[70px] md:w-[103px] pointer-events-none pb-0.5"
+              style={{
+                top: "-12px",
+                left: thumbLeft,
+                letterSpacing: "0.25em",
+              }}
+            >
+              ||||
+            </div>
           </div>
         </div>
+      )}
+
+      <div className="w-full md:hidden">
+        {isSummary && (
+          <div className="flex justify-between text-sm text-gray-500 mb-1 pt-4 gap-3">
+            <span>${min}</span>
+            <div className="relative w-full">
+              <input
+                type="range"
+                min={min}
+                max={max - 1000}
+                step={50}
+                value={baseValue}
+                onChange={handleChange}
+                className="absolute w-full appearance-none z-30 h-2 bg-transparent"
+              />
+
+              <style jsx>{`
+                input[type="range"] {
+                  -webkit-appearance: none;
+                  appearance: none;
+                }
+
+                input[type="range"]::-webkit-slider-thumb {
+                  -webkit-appearance: none;
+                  appearance: none;
+                  background-color: transparent;
+                  height: 18px;
+                  width: 70px;
+                  border-radius: 9999px;
+                  cursor: pointer;
+                }
+
+                input[type="range"]::-moz-range-thumb {
+                  background: transparent;
+                  border: none;
+                  height: 0;
+                  width: 0;
+                }
+
+                input[type="range"]::-webkit-slider-runnable-track {
+                  background: transparent;
+                }
+              `}</style>
+
+              <div
+                className={clsx(
+                  "absolute top-1/2 left-0 w-full h-2 rounded",
+                  isSummary ? "bg-gray-300" : "bg-gray-200",
+                  "-translate-y-1/2"
+                )}
+              />
+              <div className="relative w-full h-0">
+                <div
+                  className="absolute z-40 flex justify-center items-center bg-orange-500 rounded-full text-white font-bold text-sm md:h-6 h-7.5 w-[70px] md:w-[103px] pointer-events-none pb-0.5"
+                  style={{
+                    top: "-6px",
+                    left: thumbLeft,
+                    letterSpacing: "0.25em",
+                  }}
+                >
+                  ||||
+                </div>
+              </div>
+            </div>
+            <span>${max}</span>
+          </div>
+        )}
+        {isSummary && (
+          <div className="md:hidden text-center text-gray-800 font-medium text-base mt-4">
+            ${minValue} - ${maxValue}
+          </div>
+        )}
       </div>
 
       {!isSummary && (
-        <div className="flex justify-between text-sm text-gray-500 mb-1 pt-4">
+        <div className="flex justify-between text-sm text-gray-500 mb-1 pt-4 gap-4">
           <span>${min}</span>
+          <div className="relative w-full">
+            <input
+              type="range"
+              min={min}
+              max={max - 1000}
+              step={50}
+              value={baseValue}
+              onChange={handleChange}
+              className="absolute w-full appearance-none z-30 h-2 bg-transparent"
+            />
+
+            <style jsx>{`
+              input[type="range"] {
+                -webkit-appearance: none;
+                appearance: none;
+              }
+
+              input[type="range"]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                background-color: transparent;
+                height: 28px;
+                width: 70px;
+                border-radius: 9999px;
+                cursor: pointer;
+              }
+
+              input[type="range"]::-moz-range-thumb {
+                background: transparent;
+                border: none;
+                height: 0;
+                width: 0;
+              }
+
+              input[type="range"]::-webkit-slider-runnable-track {
+                background: transparent;
+              }
+            `}</style>
+
+            <div
+              className={clsx(
+                "absolute top-1/2 left-0 w-full h-2 rounded",
+                isSummary ? "bg-gray-300" : "bg-gray-200",
+                "-translate-y-1/2"
+              )}
+            />
+            <div className="relative w-full h-0">
+              <div
+                className="absolute z-40 flex justify-center items-center bg-orange-500 rounded-full text-white font-bold text-sm md:h-6 h-7.5 w-[70px] md:w-[103px] pointer-events-none pb-0.5"
+                style={{
+                  top: "-2px",
+                  left: thumbLeft,
+                  letterSpacing: "0.25em",
+                }}
+              >
+                ||||
+              </div>
+            </div>
+          </div>
           <span>${max}</span>
         </div>
       )}

@@ -97,13 +97,158 @@ export const chip_brands = [
   },
 ];
 
-export const filters = [
-  { id: 1, label: "Architecture Engineering and Construction" },
-  { id: 2, label: "Content Creation" },
-  { id: 3, label: "Product Development" },
-  { id: 4, label: "Data Science" },
-  { id: 5, label: "Media and Entertainment" },
-  { id: 6, label: "All Software" },
+// export const filters = [
+//   { id: 1, label: "Architecture Engineering and Construction" },
+//   { id: 2, label: "Content Creation" },
+//   { id: 3, label: "Product Development" },
+//   { id: 4, label: "Data Science" },
+//   { id: 5, label: "Media and Entertainment" },
+//   { id: 6, label: "All Software" },
+// ];
+
+// export const filters = [
+//   {
+//     id: 1,
+//     label: "Architecture Engineering and Construction",
+//     apps: [
+//       { id: 1, title: "AutoCAD", image: "/assets/apps/autocad.png" },
+//       { id: 2, title: "Revit", image: "/assets/apps/revit.png" },
+//       { id: 3, title: "Inventor", image: "/assets/apps/inventor.png" },
+//       { id: 4, title: "3ds Max", image: "/assets/apps/3dsmax.png" },
+//       { id: 5, title: "Maya", image: "/assets/apps/maya.png" },
+//       { id: 6, title: "Arnold", image: "/assets/apps/arnold.png" },
+//     ],
+//   },
+//   {
+//     id: 2,
+//     label: "Content Creation",
+//     apps: [
+//       { id: 7, title: "Photoshop", image: "/assets/apps/ps.png" },
+//       { id: 8, title: "Illustrator", image: "/assets/apps/ai.png" },
+//       { id: 9, title: "Lightroom", image: "/assets/apps/lr.png" },
+//       { id: 10, title: "After Effects", image: "/assets/apps/ae.png" },
+//       { id: 11, title: "Dimension", image: "/assets/apps/dn.png" },
+//       { id: 12, title: "Premiere Pro", image: "/assets/apps/pr.png" },
+//     ],
+//   },
+//   {
+//     id: 3,
+//     label: "Product Development",
+//     apps: [
+//       { id: 13, title: "Inventor", image: "/assets/apps/inventor.png" },
+//       { id: 14, title: "AutoCAD", image: "/assets/apps/autocad.png" },
+//       { id: 15, title: "Photoshop", image: "/assets/apps/ps.png" },
+//       { id: 16, title: "Revit", image: "/assets/apps/revit.png" },
+//       { id: 17, title: "Maya", image: "/assets/apps/maya.png" },
+//     ],
+//   },
+//   {
+//     id: 4,
+//     label: "Data Science",
+//     apps: [
+//       { id: 18, title: "Illustrator", image: "/assets/apps/ai.png" },
+//       { id: 19, title: "Photoshop", image: "/assets/apps/ps.png" },
+//       { id: 20, title: "After Effects", image: "/assets/apps/ae.png" },
+//       { id: 21, title: "Premiere Pro", image: "/assets/apps/pr.png" },
+//       { id: 22, title: "Dimension", image: "/assets/apps/dn.png" },
+//     ],
+//   },
+//   {
+//     id: 5,
+//     label: "Media and Entertainment",
+//     apps: [
+//       { id: 23, title: "Premiere Pro", image: "/assets/apps/pr.png" },
+//       { id: 24, title: "After Effects", image: "/assets/apps/ae.png" },
+//       { id: 25, title: "Maya", image: "/assets/apps/maya.png" },
+//       { id: 26, title: "Arnold", image: "/assets/apps/arnold.png" },
+//       { id: 27, title: "3ds Max", image: "/assets/apps/3dsmax.png" },
+//       { id: 28, title: "Lightroom", image: "/assets/apps/lr.png" },
+//     ],
+//   },
+//   {
+//     id: 6,
+//     label: "All Software",
+//     apps: [
+//       { id: 29, title: "After Effects", image: "/assets/apps/ae.png" },
+//       { id: 30, title: "Dimension", image: "/assets/apps/dn.png" },
+//       { id: 31, title: "Illustrator", image: "/assets/apps/ai.png" },
+//       { id: 32, title: "Premiere Pro", image: "/assets/apps/pr.png" },
+//       { id: 33, title: "Lightroom", image: "/assets/apps/lr.png" },
+//       { id: 34, title: "Photoshop", image: "/assets/apps/ps.png" },
+//       { id: 35, title: "3ds Max", image: "/assets/apps/3dsmax.png" },
+//       { id: 36, title: "Arnold", image: "/assets/apps/arnold.png" },
+//       { id: 37, title: "Inventor", image: "/assets/apps/inventor.png" },
+//       { id: 38, title: "Maya", image: "/assets/apps/maya.png" },
+//       { id: 39, title: "AutoCAD", image: "/assets/apps/autocad.png" },
+//       { id: 40, title: "Revit", image: "/assets/apps/revit.png" },
+//     ],
+//   },
+// ];
+
+export const filtersWithApps = [
+  {
+    id: 1,
+    label: "Architecture Engineering and Construction",
+    apps: [
+      { id: 11, title: "AutoCAD", image: "/assets/apps/autocad.png" },
+      { id: 12, title: "Revit", image: "/assets/apps/revit.png" },
+      { id: 7, title: "3ds Max", image: "/assets/apps/3dsmax.png" },
+    ],
+  },
+  {
+    id: 2,
+    label: "Content Creation",
+    apps: [
+      { id: 1, title: "After Effects", image: "/assets/apps/ae.png" },
+      { id: 4, title: "Premiere Pro", image: "/assets/apps/pr.png" },
+      { id: 5, title: "Lightroom", image: "/assets/apps/lr.png" },
+    ],
+  },
+  {
+    id: 3,
+    label: "Product Development",
+    apps: [
+      { id: 9, title: "Inventor", image: "/assets/apps/inventor.png" },
+      { id: 10, title: "Maya", image: "/assets/apps/maya.png" },
+      { id: 8, title: "Arnold", image: "/assets/apps/arnold.png" },
+    ],
+  },
+  {
+    id: 4,
+    label: "Data Science",
+    apps: [
+      { id: 2, title: "Dimension", image: "/assets/apps/dn.png" },
+      { id: 6, title: "Photoshop", image: "/assets/apps/ps.png" },
+      { id: 11, title: "AutoCAD", image: "/assets/apps/autocad.png" },
+    ],
+  },
+  {
+    id: 5,
+    label: "Media and Entertainment",
+    apps: [
+      { id: 4, title: "Premiere Pro", image: "/assets/apps/pr.png" },
+      { id: 1, title: "After Effects", image: "/assets/apps/ae.png" },
+      { id: 3, title: "Illustrator", image: "/assets/apps/ai.png" },
+    ],
+  },
+  {
+    id: 6,
+    label: "All Software",
+    apps: [
+      { id: 1, title: "After Effects", image: "/assets/apps/ae.png" },
+      { id: 2, title: "Dimension", image: "/assets/apps/dn.png" },
+      { id: 3, title: "Illustrator", image: "/assets/apps/ai.png" },
+      { id: 4, title: "Premiere Pro", image: "/assets/apps/pr.png" },
+      { id: 5, title: "Lightroom", image: "/assets/apps/lr.png" },
+      { id: 6, title: "Photoshop", image: "/assets/apps/ps.png" },
+      { id: 7, title: "3ds Max", image: "/assets/apps/3dsmax.png" },
+      { id: 8, title: "Arnold", image: "/assets/apps/arnold.png" },
+      { id: 9, title: "Inventor", image: "/assets/apps/inventor.png" },
+      { id: 10, title: "Maya", image: "/assets/apps/maya.png" },
+      { id: 11, title: "AutoCAD", image: "/assets/apps/autocad.png" },
+      { id: 12, title: "Revit", image: "/assets/apps/revit.png" },
+    ],
+  },
 ];
 
 export const resolutions = [
