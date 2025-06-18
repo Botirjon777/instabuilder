@@ -14,8 +14,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={roboto.className}>
-      <body className="bg-gray-50">
+    <html lang="en">
+      <body className={`${roboto.className} bg-gray-50`}>
         <main className="max-w-7xl mx-auto px-4 py-8">{children}</main>
         <Footer />
       </body>
