@@ -101,6 +101,12 @@ export default function SelectedCard({
         </div>
       )}
 
+      <div className="text-center">
+        <span className="text-sm font-normal text-gray-800 leading-tight">
+          {item.type || item.title || item.name}
+        </span>
+      </div>
+
       <div className="flex-1 flex items-center justify-center">
         <Image
           src={item.image || "/placeholder.svg"}
@@ -109,12 +115,6 @@ export default function SelectedCard({
           height={size}
           className="object-contain"
         />
-      </div>
-
-      <div className="text-center">
-        <span className="text-sm font-normal text-gray-800 leading-tight">
-          {item.type || item.title || item.name}
-        </span>
       </div>
     </div>
   );

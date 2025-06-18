@@ -5,10 +5,9 @@ import Link from "next/link";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
 
-import { apps, chip_brands, case_sizes, filters, steps2 } from "@/data/data";
+import { filtersWithApps, chip_brands, case_sizes, steps2 } from "@/data/data";
 
 import ProgressBar from "@/components/ProgressBar";
-
 import AppCard from "@/components/AppCard";
 import InfoTooltip from "@/components/InfoToolTip";
 import SmallCard from "@/components/SmallCard";
@@ -19,17 +18,15 @@ export default function WorkStationPage() {
   const [currentSection, setCurrentSection] = useState(0);
 
   const pathname = usePathname();
-
   const [showInfo, setShowInfo] = useState(false);
-
   const [selectedApps, setSelectedApps] = useState([]);
-  const [selectedFilter, setSelectedFilter] = useState(null);
+  const [selectedFilter, setSelectedFilter] = useState(
+    "Architecture Engineering and Construction"
+  );
   const [selectedCaseSize, setSelectedCaseSize] = useState(null);
   const [selectedChipBrand, setSelectedChipBrand] = useState([]);
-
   const [minValue, setMinValue] = useState(0);
   const [maxValue, setMaxValue] = useState(1000);
-
   const [currentStep, setCurrentStep] = useState(1);
 
   useEffect(() => {
@@ -60,6 +57,9 @@ export default function WorkStationPage() {
     setMaxValue(maxValue);
   }, []);
 
+  const currentApps =
+    filtersWithApps.find((f) => f.label === selectedFilter)?.apps || [];
+
   const Section = ({ title, children, index }) => (
     <div
       ref={sectionsRef[index]}
@@ -79,17 +79,10 @@ export default function WorkStationPage() {
                 setCurrentStep(currentStep - 1);
               }
             }}
-            className="border border-blue-500 text-blue-500 py-2 px-4 rounded"
+            className="px-6 py-2 text-blue-500 border border-blue-500 rounded-lg hover:bg-blue-50 transition-colors"
           >
             Previous
           </button>
-        )}
-        {index == 0 && (
-          <Link href="/">
-            <button className="bg-blue-500 text-white py-2 px-4 rounded">
-              Go Back
-            </button>
-          </Link>
         )}
         {index < sectionsRef.length - 1 && (
           <button
@@ -99,7 +92,7 @@ export default function WorkStationPage() {
                 setCurrentStep(currentStep + 1);
               }
             }}
-            className="bg-blue-500 text-white py-2 px-4 rounded"
+            className="bg-blue-500 text-white py-2 px-4 rounded-lg"
           >
             Next Step
           </button>
@@ -119,8 +112,8 @@ export default function WorkStationPage() {
               },
             }}
           >
-            <button className="bg-green-500 text-white py-2 px-4 rounded">
-              View Results
+            <button className="bg-[#2198F3] text-white py-2 px-4 rounded-lg">
+              Show Results
             </button>
           </Link>
         )}
@@ -141,18 +134,16 @@ export default function WorkStationPage() {
           </h3>
           <InfoTooltip show={showInfo} setShow={setShowInfo} />
         </div>
-
         <PriceRangeSlider
           min={0}
           max={7000}
           defaultValue={minValue}
           onChange={handlePriceChange}
         />
-
         <div className="flex justify-center gap-4 mt-4">
           <Link href="/">
-            <button className="bg-blue-500 text-white py-2 px-4 rounded">
-              Go Back
+            <button className="px-6 py-2 text-blue-500 border border-blue-500 rounded-lg hover:bg-blue-50 transition-colors">
+              Previous
             </button>
           </Link>
 
@@ -161,7 +152,7 @@ export default function WorkStationPage() {
               scrollToSection(1);
               setCurrentStep(2);
             }}
-            className="bg-blue-500 text-white py-2 px-4 rounded"
+            className="bg-blue-500 text-white py-2 px-4 rounded-lg"
           >
             Next Step
           </button>
@@ -174,7 +165,7 @@ export default function WorkStationPage() {
         <div className="w-full max-w-6xl flex flex-col justify-center items-center">
           <div className="w-full mb-6">
             <div className="hidden md:flex flex-wrap justify-center bg-white rounded-lg border border-gray-200 p-2 gap-2 w-full">
-              {filters.map((f) => (
+              {filtersWithApps.map((f) => (
                 <button
                   key={f.id}
                   onClick={() => setSelectedFilter(f.label)}
@@ -190,16 +181,16 @@ export default function WorkStationPage() {
               ))}
             </div>
 
-            <div className="md:hidden flex flex-col gap-2 w-full">
-              {filters.map((f) => (
+            <div className="md:hidden grid grid-cols-2 gap-2 bg-white rounded-lg border border-gray-200 p-2">
+              {filtersWithApps.map((f) => (
                 <button
                   key={f.id}
                   onClick={() => setSelectedFilter(f.label)}
                   className={clsx(
-                    "w-full px-4 py-3 text-sm font-medium transition-all duration-200 rounded-lg break-words whitespace-normal text-left",
+                    "w-full px-3 py-2 text-xs font-medium text-left rounded-md break-words whitespace-normal",
                     selectedFilter === f.label
                       ? "bg-blue-500 text-white shadow-sm"
-                      : "bg-white text-gray-700 border border-gray-200 hover:text-blue-600 hover:bg-gray-50"
+                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
                   )}
                 >
                   {f.label}
@@ -209,45 +200,36 @@ export default function WorkStationPage() {
           </div>
 
           <div className="w-full">
-            <div className="hidden md:block">
-              <div className="grid grid-cols-4 gap-6 px-4">
-                {apps.slice(0, 12).map((app) => (
-                  <AppCard
-                    key={app.id}
-                    item={app}
-                    selected={selectedApps}
-                    onClick={setSelectedApps}
-                    multiple
-                  />
-                ))}
-              </div>
-            </div>
-
-            <div className="md:hidden max-h-[400px] overflow-y-auto custom-scrollbar">
-              <div className="grid grid-cols-2 gap-4 px-4 pb-4">
-                {apps.map((app) => (
-                  <AppCard
-                    key={app.id}
-                    item={app}
-                    selected={selectedApps}
-                    onClick={setSelectedApps}
-                    multiple
-                  />
-                ))}
-              </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 px-4 pb-4">
+              {currentApps.map((app) => (
+                <AppCard
+                  key={app.id}
+                  item={app}
+                  selected={selectedApps}
+                  onClick={setSelectedApps}
+                  multiple
+                />
+              ))}
             </div>
           </div>
         </div>
       </Section>
+
       <Section title="What Workstation Form Factor Would You Prefer?" index={2}>
         <div className="grid grid-cols-2 md:flex md:flex-wrap justify-center gap-4">
-          {case_sizes.map((item) => (
-            <SmallCard
+          {case_sizes.map((item, index) => (
+            <div
               key={item.id}
-              item={item}
-              selected={selectedCaseSize}
-              onClick={setSelectedCaseSize}
-            />
+              className={`${
+                index === 2 ? "col-span-2 flex justify-center" : ""
+              } md:col-span-1`}
+            >
+              <SmallCard
+                item={item}
+                selected={selectedCaseSize}
+                onClick={setSelectedCaseSize}
+              />
+            </div>
           ))}
         </div>
       </Section>

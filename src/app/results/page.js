@@ -9,6 +9,7 @@ import { caseSizes, caseTypes, chipBrands, case_sizes } from "@/data/data";
 import Modal from "@/components/Modal";
 import PcCard from "@/components/PcCard";
 import PriceRangeSlider from "@/components/PriceRangeSlider";
+import clsx from "clsx";
 
 export default function ResultsPage() {
   const [pageType, setPageType] = useState("gaming");
@@ -71,6 +72,8 @@ export default function ResultsPage() {
 
     setSelectedFilter(params.get("selectedFilter") || null);
   }, []);
+
+  console.log(minValue, maxValue);
 
   useEffect(() => {
     setLoading(true);
@@ -180,7 +183,7 @@ export default function ResultsPage() {
 
       <h1 className="font-bold text-[35px]">Results</h1>
 
-      <div className="flex flex-col md:flex-row items-center justify-center p-6 bg-white shadow rounded w-full gap-5 md:gap-10">
+      <div className="hidden md:flex flex-col md:flex-row items-center justify-center p-6 bg-white shadow rounded w-full gap-5 md:gap-10">
         <PriceRangeSlider
           defaultValue={minValue}
           onChange={handlePriceChange}
@@ -191,17 +194,53 @@ export default function ResultsPage() {
           {filterOptions.map(({ l, t }) => (
             <div
               key={l}
-              className="flex flex-col justify-center items-center border rounded-[8px] w-[100px] h-[90px] md:w-[148px] md:h-[62px] p-3 border-[#2198F3] hover:border-blue-400"
+              className={clsx(
+                t === "FormFactor" ? "w-[110px] md:w-[148px]" : "w-[75px]",
+                "flex flex-col justify-center items-center border rounded-[8px] h-[50px] md:w-[98px] md:h-[62px] p-3 border-[#2198F3] hover:border-blue-400"
+              )}
             >
-              <span className="font-bold text-[18px]">{l}</span>
+              <span className="font-bold text-[13px] md:text-[18px]">{l}</span>
               <span
-                className="text-blue-400 cursor-pointer"
+                className="text-[#2198F3] cursor-pointer text-[13px] md:text-[14px]"
                 onClick={() => openModal(t)}
               >
                 Change
               </span>
             </div>
           ))}
+        </div>
+      </div>
+
+      <div className="md:hidden">
+        <div className="flex flex-col md:flex-row items-center justify-center p-6 bg-white shadow rounded w-full gap-5 md:gap-10">
+          <PriceRangeSlider
+            defaultValue={minValue}
+            onChange={handlePriceChange}
+            variant="summary"
+          />
+        </div>
+        <div className="flex justify-center items-center">
+          <div className="flex gap-2 pt-2 md:gap-6 text-sm w-auto">
+            {filterOptions.map(({ l, t }) => (
+              <div
+                key={l}
+                className={clsx(
+                  t === "FormFactor" ? "w-[110px]" : "w-[75px]",
+                  "flex flex-col justify-center items-center border rounded-[8px] h-[50px] md:w-[107px] md:h-[62px] p-3 border-[#2198F3] hover:border-blue-400"
+                )}
+              >
+                <span className="font-bold text-[13px] md:text-[18px]">
+                  {l}
+                </span>
+                <span
+                  className="text-[#2198F3] cursor-pointer text-[13px] md:text-[14px]"
+                  onClick={() => openModal(t)}
+                >
+                  Change
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 

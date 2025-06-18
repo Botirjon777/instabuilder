@@ -18,7 +18,7 @@ export default function InfoTooltip({ show, setShow }) {
         <GoQuestion size={24} />
       </button>
       {show && (
-        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-[#202020] text-white p-3 rounded shadow w-120 z-50 text-sm">
+        <div className="absolute bottom-10 md:bottom-full -left-30 md:left-1/2 -translate-x-1/2 mb-2 bg-[#202020] text-white p-3 rounded shadow w-80 md:w-100 z-50 text-sm">
           <p>Choose options based on your needs. .</p>
         </div>
       )}
