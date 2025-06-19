@@ -32,7 +32,7 @@ const SmallCard = memo(function SmallCard({
       {isChip && (
         <div
           className={clsx(
-            "rounded-lg p-3 shadow-sm w-35 h-35 md:w-50 md:h-50 cursor-pointer flex flex-col items-center justify-center border-2",
+            "rounded-lg p-3 shadow-sm w-35 h-35 md:w-45 md:h-45 cursor-pointer flex flex-col items-center justify-center border-2",
             isSelected ? "border-blue-500" : "border-gray-200"
           )}
           onClick={handleClick}
@@ -48,7 +48,7 @@ const SmallCard = memo(function SmallCard({
       {!isChip && (
         <div
           className={clsx(
-            "rounded-lg p-3 shadow-sm w-40 h-40 md:w-60 md:h-60 cursor-pointer flex flex-col items-center justify-between border-2",
+            "rounded-lg p-3 shadow-sm w-40 h-40 cursor-pointer flex flex-col items-center justify-between border-2 gap-1",
             isSelected ? "border-blue-500" : "border-gray-200"
           )}
           onClick={handleClick}
@@ -61,7 +61,7 @@ const SmallCard = memo(function SmallCard({
             alt={item.type || item.title}
             width={size}
             height={size}
-            className="object-contain w-30 h-30 "
+            className=""
           />
         </div>
       )}

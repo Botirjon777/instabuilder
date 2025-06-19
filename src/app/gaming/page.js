@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useEffect, useRef, useState, useCallback, memo } from "react";
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -138,6 +138,29 @@ export default function GamingPage() {
       </div>
     </div>
   );
+  const HydrationSafeGameGrid = memo(
+    ({ games, selectedGames, handleGameSelect }) => {
+      const [mounted, setMounted] = useState(false);
+      useEffect(() => setMounted(true), []);
+
+      if (!mounted) return null;
+
+      return (
+        <div className="max-h-[420px] overflow-y-auto custom-scrollbar mb-8">
+          <div className="grid grid-cols-3 pt-2 md:grid-cols-5 lg:grid-cols-7 gap-4 px-4 pb-4">
+            {games.map((game) => (
+              <GameCard
+                key={game.id}
+                item={game}
+                selected={selectedGames.includes(game.id)}
+                onClick={handleGameSelect}
+              />
+            ))}
+          </div>
+        </div>
+      );
+    }
+  );
 
   return (
     <div className="flex flex-col items-center space-y-12">
@@ -212,6 +235,11 @@ export default function GamingPage() {
               ))}
             </div>
           </div>
+          {/* <HydrationSafeGameGrid
+            games={games}
+            selectedGames={selectedGames}
+            handleGameSelect={handleGameSelect}
+          /> */}
         </div>
       </Section>
 
@@ -229,6 +257,7 @@ export default function GamingPage() {
                 item={item}
                 selected={selectedCaseSize}
                 onClick={setSelectedCaseSize}
+                size={55}
               />
             </div>
           ))}
@@ -240,7 +269,7 @@ export default function GamingPage() {
               item={item}
               selected={selectedCaseType}
               onClick={setSelectedCaseType}
-              size={150}
+              size={100}
             />
           ))}
         </div>
@@ -259,7 +288,7 @@ export default function GamingPage() {
                 item={item}
                 selected={selectedChipBrand}
                 onClick={setSelectedChipBrand}
-                size={120}
+                size={100}
                 isChip
                 multiple={true}
               />

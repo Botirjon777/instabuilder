@@ -228,6 +228,7 @@ export default function WorkStationPage() {
                 item={item}
                 selected={selectedCaseSize}
                 onClick={setSelectedCaseSize}
+                size={50}
               />
             </div>
           ))}

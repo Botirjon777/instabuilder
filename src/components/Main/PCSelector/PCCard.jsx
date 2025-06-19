@@ -24,6 +24,7 @@ export default function PCCard({ post, selectedPC, setSelectedPC }) {
           src={post.image2}
           height={100}
           width={180}
+          style={{ width: "180px", height: "auto" }}
           className="absolute -top-[40px] w-[90px] md:w-[180px] left-[30px] md:top-[70px] md:left-[120px] z-0"
           alt="Hello"
         />
@@ -31,6 +32,7 @@ export default function PCCard({ post, selectedPC, setSelectedPC }) {
           src={post.image1}
           height={110}
           width={200}
+          style={{ width: "200px", height: "auto" }}
           className="absolute -top-[50px] -left-[10px] md:top-[50px] md:left-[0px] z-10"
           alt="Hello"
         />

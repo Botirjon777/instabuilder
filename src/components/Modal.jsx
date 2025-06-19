@@ -13,6 +13,7 @@ import {
   chip_brands,
   chipBrands,
 } from "@/data/data";
+import AppCard from "./AppCard";
 
 export default function Modal({
   open,
@@ -187,14 +188,13 @@ export default function Modal({
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
                 {data.map((item) => (
-                  <SelectedCard
+                  <AppCard
                     key={item.id}
                     item={item}
                     selected={state}
-                    setSelected={setter}
+                    onClick={setter}
                     multiple={multiple}
                     size={40}
-                    aspect="tasks"
                   />
                 ))}
               </div>
@@ -203,24 +203,31 @@ export default function Modal({
 
           {modalType === "Type" && pageType === "gaming" ? (
             <div className="flex flex-col gap-6">
-              <h4 className="text-lg font-semibold text-center mb-8">
-                Case Sizes
-              </h4>
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-6 justify-items-center px-4 md:px-0 max-w-4xl mx-auto">
                 {data
                   .filter((item) => item.group === "Size")
-                  .map((item) => (
-                    <SelectedCard
+                  .map((item, index) => (
+                    <div
                       key={`size-${item.id}`}
-                      item={item}
-                      selected={selectedCaseSize}
-                      setSelected={setSelectedCaseSize}
-                      multiple={false}
-                      size={50}
-                    />
+                      className={clsx(
+                        "w-[160px]",
+                        index === 2
+                          ? "col-span-2 md:col-span-1 flex justify-center"
+                          : ""
+                      )}
+                    >
+                      <SelectedCard
+                        item={item}
+                        selected={selectedCaseSize}
+                        setSelected={setSelectedCaseSize}
+                        multiple={false}
+                        size={50}
+                      />
+                    </div>
                   ))}
               </div>
-              <div className="flex flex-wrap justify-center gap-4">
+
+              <div className="flex md:flex-wrap justify-center gap-4">
                 {data
                   .filter((item) => item.group === "Type")
                   .map((item) => (
@@ -236,8 +243,33 @@ export default function Modal({
             </div>
           ) : (
             <>
+              {modalType === "FormFactor" && pageType === "workstation" && (
+                <div className="flex flex-col gap-6">
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-6 justify-items-center px-4 md:px-0 max-w-4xl mx-auto">
+                    {data.map((item, index) => (
+                      <div
+                        key={`size-${item.id}`}
+                        className={clsx(
+                          "w-[160px]",
+                          index === 2
+                            ? "col-span-2 md:col-span-1 flex justify-center"
+                            : ""
+                        )}
+                      >
+                        <SelectedCard
+                          item={item}
+                          selected={selectedCaseSize}
+                          setSelected={setSelectedCaseSize}
+                          multiple={false}
+                          size={50}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
               {modalType === "Games" && (
-                <div className="grid grid-cols-3 md:grid-cols-7 gap-4 justify-items-center">
+                <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-7 gap-4 justify-items-center">
                   {data.map((item) => (
                     <SelectedCard
                       key={item.id}
@@ -252,29 +284,31 @@ export default function Modal({
                   ))}
                 </div>
               )}
-              {modalType !== "Games" && modalType !== "Tasks" && (
-                <div
-                  className={clsx(
-                    isWorkstationTasks
-                      ? "grid grid-cols-2 md:grid-cols-4 gap-6 justify-items-center"
-                      : "grid grid-cols-2 md:flex md:flex-wrap gap-4 justify-center"
-                  )}
-                >
-                  {(isWorkstationTasks ? data.slice(0, 12) : data).map(
-                    (item) => (
-                      <SelectedCard
-                        key={item.id}
-                        item={item}
-                        selected={state}
-                        setSelected={setter}
-                        multiple={multiple}
-                        isChip={isChip}
-                        size={isWorkstationTasks ? 40 : undefined}
-                      />
-                    )
-                  )}
-                </div>
-              )}
+              {modalType !== "Games" &&
+                modalType !== "Tasks" &&
+                modalType !== "FormFactor" && (
+                  <div
+                    className={clsx(
+                      isWorkstationTasks
+                        ? "grid grid-cols-2 md:grid-cols-4 gap-6 justify-items-center"
+                        : "grid grid-cols-2 md:flex md:flex-wrap gap-4 justify-center"
+                    )}
+                  >
+                    {(isWorkstationTasks ? data.slice(0, 12) : data).map(
+                      (item) => (
+                        <SelectedCard
+                          key={item.id}
+                          item={item}
+                          selected={state}
+                          setSelected={setter}
+                          multiple={multiple}
+                          isChip={isChip}
+                          size={isWorkstationTasks ? 40 : undefined}
+                        />
+                      )
+                    )}
+                  </div>
+                )}
             </>
           )}
         </div>
