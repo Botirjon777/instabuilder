@@ -9,7 +9,7 @@ export default function SelectedCard({
   multiple = false,
   isChip = false,
   isGameCard = false,
-  size = 80,
+  size = 50,
   aspect = "default",
 }) {
   const isSelected = multiple
@@ -69,16 +69,12 @@ export default function SelectedCard({
     );
   }
 
-  const aspectClass =
-    aspect === "tasks"
-      ? "w-full min-h-[110px] aspect-[5/1] md:aspect-[4/1]"
-      : "w-full max-w-[200px] aspect-[4/3]";
   return (
     <div
       onClick={handleClick}
       className={clsx(
         "relative rounded-lg bg-white border transition-all duration-200 cursor-pointer hover:shadow-md",
-        aspectClass,
+        "aspect-[4/3] w-[160px] h-[160px]",
         "flex flex-col items-center justify-center gap-2 p-4",
         isSelected
           ? "border-blue-500 bg-blue-50 shadow-md"
@@ -100,22 +96,34 @@ export default function SelectedCard({
           </svg>
         </div>
       )}
-
-      <div className="text-center">
-        <span className="text-sm font-normal text-gray-800 leading-tight">
-          {item.type || item.title || item.name}
-        </span>
-      </div>
-
-      <div className="flex-1 flex items-center justify-center">
-        <Image
-          src={item.image || "/placeholder.svg"}
-          alt={item.type || item.title || item.name}
-          width={size}
-          height={size}
-          className="object-contain"
-        />
-      </div>
+      {!isChip && (
+        <div
+          className={clsx(
+            "p-3 w-35 h-35 cursor-pointer flex flex-col items-center justify-between gap-2"
+          )}
+        >
+          <span className="text-center font-bold text-sm">
+            {item.type || item.title}
+          </span>
+          <Image
+            src={item.image}
+            alt={item.type || item.title}
+            width={size}
+            height={size}
+          />
+        </div>
+      )}
+      {isChip && (
+        <div className="flex-1 flex items-center justify-center w-40 h-40">
+          <Image
+            src={item.image || "/placeholder.svg"}
+            alt={item.type || item.title || item.name}
+            width={80}
+            height={80}
+            className="object-contain"
+          />
+        </div>
+      )}
     </div>
   );
 }

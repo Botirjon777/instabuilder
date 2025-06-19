@@ -73,8 +73,6 @@ export default function ResultsPage() {
     setSelectedFilter(params.get("selectedFilter") || null);
   }, []);
 
-  console.log(minValue, maxValue);
-
   useEffect(() => {
     setLoading(true);
     const timeout = setTimeout(() => {
@@ -214,7 +212,7 @@ export default function ResultsPage() {
       <div className="md:hidden">
         <div className="flex flex-col md:flex-row items-center justify-center p-6 bg-white shadow rounded w-full gap-5 md:gap-10">
           <PriceRangeSlider
-            defaultValue={minValue}
+            value={minValue}
             onChange={handlePriceChange}
             variant="summary"
           />
@@ -249,7 +247,7 @@ export default function ResultsPage() {
           <div className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
         </div>
       ) : filteredPcs.length ? (
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {filteredPcs.map((pc) => (
             <PcCard pc={pc} key={pc.id} />
           ))}
